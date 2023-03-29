@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a">Calendar of the Norman Rolls 
+               Henry V </title>
+            <title type="sub">First Part</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               Devoir XML TEI - Edition 
+            </edition>
+            <respStmt>
+               <resp>Encodage</resp>
+               <persName>Justine Chainiau</persName>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Eyre and Spottiswoode</publisher>
+            <pubPlace>London</pubPlace>
+            <date when-iso="1880-07">Juillet 1880</date>
+            <distributor facs="https://archive.org/details/41stAnnualReportOfTheDeputyKeeperOfThePublicRecords/page/n7/mode/2up">Internet Archive</distributor>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main">Calendar of the Norman Rolls - Henry V</title>
+               <title type="subtitle">First Part</title>   
+            </bibl>            
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Encodage réalisé dans le cadre du cours XML TEI du Master 2 TNAH. </p>
+         </projectDesc>
+         <p>Cet encodage a été réalisé à partir de la numérisation de l'édition des Norman Rolls disponible sur Internet Archive.
+            Le schéma d’encodage choisi pour les Norman Rolls est simple : les actes sont encodés sous forme de listes d’événements pour chaque membrane. 
+            Cette structuration organisée du contenu facilite la lisibilité tout en mettant valeur la typologie, la date et la localisation de chaque acte : des informations clés permettant de reconstituer le parcours des Anglais et leur administration du territoire. 
+            Les personnes concernées sont signalées au sein de l’encodage de chaque acte puis répertoriées dans une liste présente dans le header. 
+            Cela permet d’esquisser le profil des individus mentionnés (activités, statut, lieu de résidence, relations …) et leurs rapports avec le nouveau pouvoir en place : hommages et rébellions, ainsi que les enjeux économiques générés (restitutions, donations … ). 
+            A terme, ces succinctes biographies, croisée avec d’autres sources locales (comme les registre du tabellionage de Caen par exemple) pourraient servir à la constitution d’une base prosopographique permettant d’étudier l’attitude des normands, et plus particulièrement de certaines classes sociales, vis-à-vis des Anglais. 
+            Une édition interactive (sous forme de carte) des Norman Rolls donnant à la fois accès au contenu des actes et aux informations concernant les individus (prosopographie) tout en retraçant le trajet d’Henry V et de sa chancellerie serait intéressante. 
+            Néanmoins, l’encodage manuel de ces rouleaux et le répertoriage de tous les individus mentionnés reste un travail extrêmement chronophage dont l’édition intégrale représenterait une entreprise colossale.
+            Toutefois, des chercheurs de l'Université de Southampton ont travaillé à une édition sous forme de tableur (Excel) de la moitié de ces rouleaux. Il serait alors pertinent d'envisager la conception d'une chaîne de traitement permettant la transformation de ce document Excel contenant les éditions en un fichier XML (TEI).
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <p>Les Norman Rolls sont des rouleaux émis par la chancellerie anglaise, contenant l’enregistrement des actes concernant l’administration de la Normandie par les souverains Anglais. 
+               La conquête et l’occupation du duché de Normandie par Henry V durant la guerre de Cent Ans donnent lieu à des enrôlements. 
+               Les rouleaux concernant cette période sont au nombre de dix, divisés par années de règne. 
+               Ils contiennent 810 membranes, 697 d’entre elles comportent des entrées et les actes sont recopiés à la fois sur les faces et les dorsales. 
+               Les membranes ont été cousues ensemble à la fin de chaque année de règne, en conséquence, les entrées ne respectent pas un ordre chronologique. 
+               La rédaction des actes commence le jour du débarquement du souverain anglais à l'embouchure de la Touques, le 1er août 1417, et se termine juste avant sa mort en 1422. 
+               Henry V mène une politique de conciliation entre les habitants et les soldats anglais. 
+               Pour cela, une série d'ordonnances disciplinaires relatives aux garnisons et d’actes de donations ou de confirmations de possessions est émise puis enregistrée au sein des Norman Rolls. 
+               La typologie des actes est variée : gestion des biens et des personnes (licences, sauf-conduits), administration des localités normandes. 
+               La nature des actes donne des indications sur le statut des individus mais aussi sur leurs attitudes vis-à-vis de l’autorité d’Outre-Manche. 
+               Pour chaque acte sont en premier indiqués la date et le lieu de rédaction, ce qui contribue à situer les événements dans un contexte spatio-temporel ainsi qu’à restituer une partie des activités de la chancellerie anglaise. 
+               Ensuite, leur lecture renseigne sur les lieux concernés et les personnes impliquées de manière assez précise puisque l’on a parfois la mention des activités, des qualités des individus, de leurs possessions ou de leurs liens familiaux. 
+               Ces rouleaux représentent une source administrative d’envergure pour l’étude de la période Lancastrienne. 
+               Après la mort d’Henry V, ils ont été rapportés en Angleterre pour être conservés dans la Tour de Londres. 
+               L’accès à cette source peut se faire en ligne par consultation des éditions anglaises disponibles au sein des quarante et unième et quarante deuxième rapports annuels du conservateur adjoint des archives publiques de 1880 et 1881. </p>
+         </settingDesc>
+         <creation>
+            <date when-iso="1417">1417</date>
+            <country key="FR">Normandy</country>
+            <lang xml:lang="en"/>
+         </creation>
+         <particDesc>
+            <listPerson>
+               <person xml:id="William_Hotoft">
+                  <persName>William Hotoft</persName>
+               </person>
+               <person xml:id="Ralph_Jone">
+                  <persName>Ralph Jone</persName>
+                  <note>deceased</note>
+               </person>
+               <person xml:id="John_Cottard">
+                  <persName>John Cottard</persName>
+                  <note>deceased</note>
+               </person>
+               <person xml:id="William_Porter">
+                  <persName>William Porter</persName>
+                  <state><label>esquire</label></state>
+               </person>
+               <person xml:id="William_d_Assy">
+                  <persName>William d'Assy</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Richard_Beauchamp">
+                  <persName>Richard Beauchamp</persName>
+                  <occupation>Earl of Warwick</occupation>
+               </person>
+               <person xml:id="Guillerm_de_Champsdivers">
+                  <persName>Guillerm de Champsdivers</persName>
+                  <occupation>Chamberlain of the Duke of Burgundy</occupation>
+                  <state><label>knight</label></state>
+               </person>
+               <person xml:id="John_Duke_of_Burgundy">
+                  <persName>John</persName>
+                  <occupation>Duke of Burgundy</occupation>
+               </person>
+               <person xml:id="Thomas_Walshe">
+                  <persName>Thomas Walshe</persName>
+               </person>
+               <person xml:id="Joan_de_Brucourt">
+                  <persName>Joan de Brucourt</persName>
+                  <note>widow of Gerard de Tournebu</note>
+               </person>
+               <person xml:id="Gerard_de_Tournebu">
+                  <persName>Gerard de Tournebu</persName>
+                  <note>deceased, husband of Joan de Brucourt</note>
+               </person>
+               <person xml:id="Ralph_Neville">
+                  <persName>Ralph Neville</persName>
+               </person>
+               <person xml:id="William_Desmoulins">
+                  <persName>William Desmoulins</persName>
+                  <state><label>knight</label><label>rebel</label></state>
+               </person>
+               <person xml:id="Robert_de_Freville">
+                  <persName>Robert de Freville</persName>
+                  <state><label>knight</label><label>rebel</label></state>
+               </person>
+               <person xml:id="Henry_Flynthalgh">
+                  <persName>Henry Flynthalgh</persName>
+               </person>
+               <person xml:id="John_Caumont">
+                  <persName>John Caumont</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="William_Harrington">
+                  <persName>William Harrington</persName>
+                  <state><label>knight</label></state>
+               </person>
+               <person xml:id="Drugo_de_Beaussy">
+                  <persName>Drugo de Beaussy</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Richard_Geffrey">
+                  <persName>Richard Geffrey</persName>
+                  <occupation>Minstrel</occupation>
+               </person>
+               <person xml:id="Benedict_le_Coutelier">
+                  <persName>Benedict le Coutelier</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="John_Conners">
+                  <persName>John Conners</persName>
+               </person>
+               <person xml:id="John_Harmoville">
+                  <persName>John Harmoville</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Peter_de_Freuy">
+                  <persName>Peter de Freuy</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="John_Pyket">
+                  <persName>John Pyket</persName>
+               </person>
+               <person xml:id="Henry_Bishop_of_Winchester">
+                  <persName>Henry</persName>
+                  <occupation>Bishop of Winchester</occupation>
+               </person>
+               <person xml:id="Nicholas_Bishop_of_Bath">
+                  <persName>Nicholas</persName>
+                  <occupation>Bishop of Bath and Wells</occupation>
+               </person>
+               <person xml:id="John_Bishop_of_Coventry">
+                  <persName>John</persName>
+                  <occupation>Bishop of Coventry and Lichfield</occupation>
+               </person>
+               <person xml:id="Thomas_Polton">
+                  <persName>Thomas Polton</persName>
+                  <occupation>Dean of York</occupation>
+               </person>
+               <person xml:id="John_Langret">
+                  <persName>John Langret</persName>
+                  <occupation>Bishop of Bayeux</occupation>
+               </person>
+               <person xml:id="Lewis_Thesart">
+                  <persName>Lewis Thesart</persName>
+               </person>
+               <person xml:id="John_Parker">
+                  <persName>John Parker</persName>
+               </person>
+               <person xml:id="Roberta_le_Boiz">
+                  <persName>Roberta le Boiz</persName>
+                  <note>wife of Robert de la Hay</note>
+               </person>
+               <person xml:id="Robert_de_la_Hay">
+                  <persName>Robert de la Hay</persName>
+                  <note>husband of Roberta le Boiz</note>
+               </person>
+               <person xml:id="Stephen_D_Estuvaulx">
+                  <persName>Stephen D’Estuvaulx</persName>
+               </person>
+               <person xml:id="Lawrence_de_Carou">
+                  <persName>Lawrence de Carou</persName>
+                  <state><label>absentee</label></state>
+               </person>
+               <person xml:id="John_Lerfault">
+                  <persName>John Lerfault</persName>
+                  <state><label>absentee</label></state>
+               </person>
+               <person xml:id="Henry_Baubignon">
+                  <persName>Henry Baubignon</persName>
+                  <note>son of John Baubignon</note>
+               </person>
+               <person xml:id="John_Baubignon">
+                  <persName>John Baubignon</persName>
+                  <note>father of Henry Baubignon</note>
+               </person>
+               <person xml:id="John_de_Foucqueville">
+                  <persName>John de Foucqueville</persName>
+               </person>
+               <person xml:id="John_de_Larchamp">
+                  <persName>John de Larchamp</persName>
+               </person>
+               <person xml:id="Peter_Taillebois">
+                  <persName>Peter Taillebois</persName>
+                  <occupation>Keeper of the seal for recognizances at Bayeux</occupation>
+               </person>
+               <person xml:id="John_Earl_of_Huntingdon">
+                  <persName>John</persName>
+                  <occupation>Earl of Huntingdon</occupation>
+               </person>
+               <person xml:id="William_Balargent">
+                  <persName>William Balargent</persName>
+                  <residence>late citizen of Caen</residence>
+               </person>
+               <person xml:id="Cudard_de_Fouilliac">
+                  <persName>Cudard de Fouilliac</persName>
+                  <occupation>Secretary of the Duke of Orleans</occupation>
+                  <note>prisoner of the King</note>
+               </person>
+               <person xml:id="John_Duke_s_brother">
+                  <persName>John</persName>
+                  <note>brother of the Duke of Burgundy</note>
+               </person>
+               <person xml:id="William_Hasand">
+                  <persName>William Hasand</persName>
+               </person>
+               <person xml:id="John_Suhard">
+                  <persName>John Suhard</persName>
+                  <state><label>rebel</label></state>
+                  <note>brother of Roger Suhard</note>
+               </person>
+               <person xml:id="Roger_Suhard">
+                  <persName>Roger Suhard</persName>
+                  <state><label>rebel</label></state>
+                  <note>brother of John Suhard</note>
+               </person>
+               <person xml:id="Peter_Logge">
+                  <persName>Peter Logge</persName>
+               </person>
+               <person xml:id="William_le_Gars">
+                  <persName>William le Gars</persName>
+               </person>
+               <person xml:id="Thomas_Lyndford">
+                  <persName>Thomas Lyndford</persName>
+                  <occupation>Yeoman of the King's stables</occupation>
+               </person>
+               <person xml:id="William_de_Vaux">
+                  <persName>William de Vaux</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="William_Wymyngton">
+                  <persName>William Wymyngton</persName>
+               </person>
+               <person xml:id="John_Garnere">
+                  <persName>John Garnere</persName>
+                  <state><label>rebel</label></state>
+                  <residence>citizen of Argentan</residence>
+               </person>
+               <person xml:id="John_Bromley">
+                  <persName>John Bromley</persName>
+               </person>
+               <person xml:id="Alan_de_Beaumont">
+                  <persName>Alan de Beaumont</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="William_Rothelane">
+                  <persName>William Rothelane</persName>
+               </person>
+               <person xml:id="Oliver_Folygny">
+                  <persName>Oliver Folygny</persName>
+                  <state><label>rebel</label></state>
+                  <note>brother of James Foligny</note>
+               </person>
+               <person xml:id="James_Folygny">
+                  <persName>James_Folygny</persName>
+                  <state><label>rebel</label></state>
+                  <note>brother of Oliver Foligny</note>
+               </person>
+               <person xml:id="Andrew_Ballam">
+                  <persName>Andrew Ballam</persName>
+               </person>
+               <person xml:id="John_Bidault">
+                  <persName>John Bidault</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Richard_Gauter">
+                  <persName>Richard Gauter</persName>
+                  <occupation>Cordwainer</occupation>
+                  <residence>parish of S. Peter, Caen</residence>
+               </person>
+               <person xml:id="Robert_Moutiers">
+                  <persName>Robert Moutiers</persName>
+                  <residence>Bayeux</residence>
+               </person>
+               <person xml:id="Richard_Bristowe">
+                  <persName>Richard Bristowe</persName>
+               </person>
+               <person xml:id="Benedict_le_Harpeur">
+                  <persName>Benedict le Harpeur</persName>
+                  <residence>of Bayeux</residence>
+               </person>
+               <person xml:id="Nicholas_le_Harpeur">
+                  <persName>Nicholas le Harpeur</persName>
+                  <residence>of Bayeux</residence>
+               </person>
+               <person xml:id="Ralph_le_Harpeur">
+                  <persName>Ralph le Harpeur</persName>
+                  <residence>of Bayeux</residence>
+               </person>
+               <person xml:id="Richard_Muriel">
+                  <persName>Richard Muriel</persName>
+                  <residence>of Bayeux</residence>
+               </person>
+               <person xml:id="Peter_Muriel">
+                  <persName>Peter Muriel</persName>
+                  <residence>of Bayeux</residence>
+               </person>
+               <person xml:id="John_Adeline">
+                  <persName>John Adeline</persName>
+                  <residence>of Bayeux</residence>
+               </person>
+               <person xml:id="John_Gosselin">
+                  <persName>John Gosselin</persName>
+                  <residence>of Bayeux</residence>
+                  <state><label>senior</label></state>
+               </person>
+               <person xml:id="Peter_Gosselin">
+                  <persName>Peter_Gosselin</persName>
+                  <residence>of Bayeux</residence>
+                  <state><label>junior</label></state>
+               </person>
+               <person xml:id="John_le_Harpeur">
+                  <persName>John le Harpeur</persName>
+               </person>
+               <person xml:id="John_Gourdec">
+                  <persName>John Gourdec</persName>
+               </person>
+               <person xml:id="Richard_Lucas">
+                  <persName>Richard Lucas</persName>
+               </person>
+               <person xml:id="John_le_Maigre">
+                  <persName>John le Maigre</persName>
+               </person>
+               <person xml:id="Peter_le_Maigre">
+                  <persName>Peter le Maigre</persName>
+               </person>
+               <person xml:id="Joan_de_Boys_Hubault">
+                  <persName>Joan de Boys Hubault</persName>
+                  <note>widow of Robert de Thibouville</note>
+               </person>
+               <person xml:id="Robert_de_Thibouville">
+                  <persName>Robert de Thibouville</persName>
+                  <state><label>knight</label></state>
+                  <note>deceased, husband of Joan de Boys Hubault</note>
+               </person>
+               <person xml:id="John_de_Maugneville">
+                  <persName>John de Maugneville</persName>
+                  <state><label>knight</label></state>
+               </person>
+               <person xml:id="Joan_de_Ver">
+                  <persName>Joan de Ver</persName>
+                  <note>widow of James de Foligny</note>
+               </person>
+               <person xml:id="James_de_Foligny">
+                  <persName>James de Foligny</persName>
+                  <state><label>knight</label></state>
+                  <note>deceased, husband of Joan de Ver</note>
+               </person>
+               <person xml:id="Richard_de_la_Fosse">
+                  <persName>Richard de la Fosse</persName>
+                  <occupation>Prior at the convent of Tailleville, Caen</occupation>
+               </person>
+               <person xml:id="Stephen_Barate">
+                  <persName>Stephen Barate</persName>
+                  <occupation>Weigher of all saleable goods coming to Bayeux</occupation>
+                  <residence>citizen of Bayeux</residence>
+               </person>
+               <person xml:id="John_Popham">
+                  <persName>John Popham</persName>
+                  <occupation>At the service of the King in Normandy</occupation>
+                  <state><label>knight</label></state>
+               </person>
+               <person xml:id="John_Frank">
+                  <persName>John Frank</persName>
+                  <occupation>Clerck</occupation>
+               </person>
+               <person xml:id="William_Westbury">
+                  <persName>William Westbury</persName>
+               </person>
+               <person xml:id="Philip_le_Clerc">
+                  <persName>Philip le Clerc</persName>
+                  <occupation>Chaplain of the parish of Lion-sur-Mer</occupation>
+               </person>
+               <person xml:id="John_Gray">
+                  <persName>John Gray</persName>
+                  <occupation>At the service of the King in Normandy</occupation>
+                  <state><label>knight</label></state>
+               </person>
+               <person xml:id="Thomas_Caldewell">
+                  <persName>Thomas Caldewell</persName>
+                  <occupation>Clerck of Lincoln</occupation>
+               </person>
+               <person xml:id="Alan_Humburston">
+                  <persName>Alan Humburston</persName>
+                  <residence>of Lincoln</residence>
+               </person>
+               <person xml:id="Robert_Heron">
+                  <persName>Robert Heron</persName>
+                  <occupation>Prior of the convent of S. Briouse</occupation>
+               </person>
+               <person xml:id="John_Meigniant">
+                  <persName>John Meigniant</persName>
+                  <occupation>verderor</occupation>
+                  <residence>Mont de Lencre, in the vicomté of Vire</residence>
+               </person>
+               <person xml:id="John_Botelier">
+                  <persName>John Botelier</persName>
+               </person>
+               <person xml:id="Robert_Riqueville">
+                  <persName>Robert_Riqueville</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="William_Riqueville">
+                  <persName>William_Riqueville</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Peter_Goudenin">
+                  <persName>Peter Goudenin</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Richard_Goudenin">
+                  <persName>Richard Goudenin</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="John_Gesors">
+                  <persName>John Gesors</persName>
+                  <state><label>rebel</label></state>
+               </person>
+               <person xml:id="Joan_de_Rupalay">
+                  <persName>Joan de Rupalay</persName>
+                  <note>widow of Robert de Bloville</note>
+               </person>
+               <person xml:id="Robert_de_Bloville">
+                  <persName>Robert de Bloville</persName>
+                  <note>deceased, husband of Joan de Rupalay</note>
+               </person>
+               <person xml:id="John_Harpeden">
+                  <persName>John Harpeden</persName>
+                  <state><label>knight</label></state>
+               </person>
+               <person xml:id="Joan_de_Champayn">
+                  <persName>Joan de Champayn</persName>
+                  <note>widow of Nicholas Paignel</note>
+               </person>
+               <person xml:id="Nicholas_Paignel">
+                  <persName>Nicholas Paignel</persName>
+                  <state><label>absentee</label></state>
+                  <note>husband of Joan de Champayn</note>
+               </person>
+               <person xml:id="Joan_Liebart">
+                  <persName>Joan Liebart</persName>
+                  <note>widow of William de Vauchelles</note>
+               </person>
+               <person xml:id="William_de_Vauchelles">
+                  <persName>William de Vauchelles</persName>
+                  <note>deceased, husband of Joan Liebart</note>
+               </person>
+               <person xml:id="Joan_de_la_Rochelle">
+                  <persName>Joan de la Rochelle</persName>
+                  <note>widow of Anthony de Wargmez</note>
+               </person>
+               <person xml:id="Anthony_de_Wargmez">
+                  <persName>Anthony de Wargmez</persName>
+                  <note>deceased, husband of Joan de la Rochelle</note>
+               </person>
+               <person xml:id="Nicholas_de_Mouster">
+                  <persName>Nicholas de Mouster</persName>
+                  <occupation>Master</occupation>
+               </person>
+               <person xml:id="Robert_la_Hure">
+                  <persName>Robert la Hure</persName>
+               </person>
+               <person xml:id="Richard_de_Beuseville">
+                  <persName>Richard de Beuseville</persName>
+                  <occupation>Canon of Bayeux</occupation>
+               </person>
+               <person xml:id="Maturine_Pilliehonne">
+                  <persName>Maturine Pilliehonne</persName>
+                  <occupation>Prioress of S. Mary de la Came, Bayeux</occupation>
+               </person>
+               <person xml:id="Mary_Graunt">
+                  <persName>Mary Graunt</persName>
+                  <note>widow of Lewis Graunt</note>
+               </person>
+               <person xml:id="Lewis_Graunt">
+                  <persName>Lewis Graunt</persName>
+                  <note>deceased, husband of Mary Graunt</note>
+               </person>
+               <person xml:id="Simon_Basire">
+                  <persName>Simon Basire</persName>
+               </person>
+               <person xml:id="Joan_l_Englois">
+                  <persName>Joan l'Englois</persName>
+                  <note>widow of John l'Englois</note>
+               </person>
+               <person xml:id="John_l_Englois">
+                  <persName>John l'Englois</persName>
+                  <note>deceased, husbanf of Joan l'Englois</note>
+               </person>
+               <person xml:id="Nicholas_Philip">
+                  <persName>Nicholas Philip</persName>
+                  <residence>citizen of Bayeux</residence>
+               </person>
+               <person xml:id="Edward_Earl_of_Mortagne">
+                  <persName>Edward</persName>
+                  <occupation>Earl of Mortagne</occupation>
+               </person>
+               <person xml:id="Laurence_de_Carou">
+                  <persName>Laurence de Carou</persName>
+               </person>
+               <person xml:id="John_Ersfault">
+                  <persName>John Ersfault</persName>
+               </person>
+               <person xml:id="Roger_le_Pelerin">
+                  <persName>Roger le Pelerin</persName>
+                  <occupation>Peasant</occupation>
+                  <note>father of John le Pelerin</note>
+               </person>
+               <person xml:id="John_le_Pelerin">
+                  <persName>John le Pelerin</persName>
+                  <occupation>Peasant</occupation>
+                  <note>son of Roger le Pelerin</note>
+               </person>
+               <person xml:id="John_Boudoum">
+                  <persName>John Boudoum</persName>
+                  <occupation>Peasant</occupation>
+                  <note>father of Peter, Ralph and Giles Boudoum</note>
+               </person>
+               <person xml:id="Peter_Boudoum">
+                  <persName>Peter Boudoum</persName>
+                  <occupation>Peasant</occupation>
+                  <note>son of John Boudoum and brother of Ralph and Giles Boudoum</note>
+               </person>
+               <person xml:id="Ralph_Boudoum">
+                  <persName>Ralph Boudoum</persName>
+                  <occupation>Peasant</occupation>
+                  <note>son of John Boudoum and brother of Peter and Giles Boudoum</note>
+               </person>
+               <person xml:id="Giles_Boudoum">
+                  <persName>Giles Boudoum</persName>
+                  <occupation>Peasant</occupation>
+                  <note>son of John Boudoum and brother of Peter and Ralph Boudoum</note>
+               </person>
+               <person xml:id="Philip_Summoneaulx">
+                  <persName>Philip Summoneaulx</persName>
+                  <occupation>Peasant</occupation>
+                  <note>father of John Summoneaulx</note>
+               </person>
+               <person xml:id="John_Summoneaulx">
+                  <persName>John Summoneaulx</persName>
+                  <occupation>Peasant</occupation>
+                  <note>son of Philip Summoneaulx</note>
+               </person>
+               <person xml:id="Ralph_de_Basco">
+                  <persName>Ralph de Basco</persName>
+                  <occupation>Peasant</occupation>
+                  <note>father of Thomas de Basco</note>
+               </person>
+               <person xml:id="Thomas_de_Basco">
+                  <persName>Thomas_de_Basco</persName>
+                  <occupation>Peasant</occupation>
+                  <note>son of Ralph de Basco</note>
+               </person>
+               <person xml:id="Michael_Sufflet">
+                  <persName>Michael Sufflet</persName>
+                  <occupation>Peasant</occupation>
+               </person>  
+               <person xml:id="William_de_la_Haie">
+                  <persName>William de la Haie</persName>
+                  <occupation>Merchant</occupation>
+               </person>
+               <person xml:id="Joan_Bescog">
+                  <persName>Joan Bescog</persName>
+                  <note>widow of Jordan_Bescog</note>
+               </person>
+               <person xml:id="Jordan_Bescog">
+                  <persName>Jordan Bescog</persName>
+                  <note>deceased, husband of Joan Bescog</note>
+                  <residence>Bayeux</residence>
+               </person>
+               <person xml:id="John_de_Buret">
+                  <persName>John de Buret</persName>
+                  <note>son of a rebel</note>
+               </person>
+               <person xml:id="Adam_Bishop_of_Mans">
+                  <persName>Adam</persName>
+                  <occupation>Bishop of Mans</occupation>
+               </person>
+               <person xml:id="John_Dubey">
+                  <persName>John Dubey</persName>
+                  <occupation>Chaplain</occupation>
+               </person>
+               <person xml:id="Gervais_Larchamp">
+                  <persName>Gervais Larchamp</persName>
+                  <occupation>Sub-dean of S. Mary of Bayeux</occupation>
+               </person>
+               <person xml:id="John_Larchamp">
+                  <persName>John Larchamp</persName>
+               </person>
+               <person xml:id="Reginald_West">
+                  <persName>Reginald West</persName>
+                  <occupation>Captain of S. Lô.</occupation>
+               </person>
+               <person xml:id="John_Smythes">
+                  <persName>John Smythes</persName>
+                  <occupation>Captain of the town of Vire</occupation>
+               </person>
+               <person xml:id="Matthew_de_Aula">
+                  <persName>Matthew de Aula</persName>
+               </person>
+               <person xml:id="John_de_Jusseyo">
+                  <persName>John de Jusseyo</persName>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="membrane" n="41">
+            <listEvent>
+               <event type="grant" when="1418-03-21" where="Bayeux">
+                  <desc>Grant to <persName ref="#William_Hotoft">William Hotoft</persName> in tail male of the lordship of Asseville of <persName ref="#Ralph_Jone">Ralph Jone</persName>, deceased, also of the manor of Herville Caen of <persName ref="#John_Cottard">John Cottard</persName>, deceased, by homage and the rendering yearly a sword to the King.</desc>
+               </event>
+               <event type="grant" when="1418-03-21" where="Bayeux">
+                  <desc>Same to <persName ref="#William_Porter">William Porter</persName>, esquire, in tail male of the possessions of <persName ref="#William_d_Assy">William d'Assy</persName>, a rebel, by homage and the rendering yearly a pole axe to the King.</desc>
+               </event>
+               <event type="power" when="1418-03-21" where="Bayeux">
+                  <desc>Power for <persName ref="#Richard_Beauchamp">Richard Beauchamp</persName>, Earl of Warwick, to treat with <persName ref="#Guillerm_de_Champsdivers">Guillerm de Champsdivers</persName>, knight, Chamberlain of <persName ref="#John_Duke_of_Burgundy">John</persName>, Duke of Burgundy, for the prorogation of the truce with the Duke of Burgundy.</desc>
+               </event>
+               <event type="commission" when="1418-03-23" where="Bayeux">
+                  <desc>Commission to <persName ref="#Thomas_Walshe">Thomas Walshe</persName> to procure workmen from London and its suburbs to make harps for the King's use.</desc>
+               </event>
+               <event type="dower" when="1418-03-24" where="Bayeux">
+                  <desc>Dower to <persName ref="#Joan_de_Brucourt">Joan de Brucourt</persName>, widow of <persName ref="#Gerard_de_Tournebu">Gerard de Tournebu</persName>.</desc>
+               </event>
+               <event type="commission" when="1418-03-24" where="Bayeux">
+                  <desc>Commission to <persName ref="#Guillerm_de_Champsdivers">Guillerm de Champdivers</persName> to prorogue the truce between the King of England and the Duke of Burgundy.</desc>
+               </event>
+            </listEvent>
+         </div>
+         <div type="membrane" n="40">
+            <listEvent>
+               <event type="grant" when="1418-03-28" where="Bayeux">
+                  <desc>Grant to <persName ref="#Ralph_Neville">Ralph Neville</persName> in tail male of the possessions of <persName ref="#William_Desmoulins">William Desmoulins</persName> and <persName ref="#Robert_de_Freville">Robert de Freville</persName>, knights, rebels, by homage and the rendering yearly a pole axe to the King.</desc>
+               </event>
+               <event type="grant" when="1418-03-25" where="Bayeux">
+                  <desc>Same for life to <persName ref="#Richard_Beauchamp">Richard Beauchamp</persName>, Earl of Warwick, of the house in Caen called l'Ostell Bavent [l’hôtel Bavent].</desc>
+               </event>
+               <event type="grant" when="1418-03-21" where="Bayeux">
+                  <desc>Same to <persName ref="#Henry_Flynthalgh">Henry Flynthalgh</persName> in tail male of the possessions of <persName ref="#John_Caumont">John Caumont</persName>, a rebel, by homage and the rendering yearly a lance to the King.</desc>
+               </event>
+               <event type="grant" when="1418-03-21" where="Bayeux">
+                  <desc>Same for life to <persName ref="#William_Harrington">William Harrington</persName>, knight, of the house in Caen of <persName ref="#Drugo_de_Beaussy">Drugo de Beaussy</persName>, a rebel.</desc>
+               </event>
+               <event type="restitution" when="1418-03-24" where="Bayeux">
+                  <desc>Restitution of its temporalities to the Convent of S. Mary of Villers-Lequinet, near Falaise.</desc>
+               </event>
+               <event type="grant" when="1418-03-23" where="Bayeux">
+                  <desc>Grant to <persName ref="#Richard_Geffrey">Richard Geffrey</persName>, minstrel, in tail male of the land of Vaux-sur-Mer and of the other possessions in Caen of <persName ref="#Benedict_le_Coutelier">Benedict le Coutelier</persName>, a rebel, by homage and the rendering yearly a dagger to the King.</desc>
+               </event>
+               <event type="grant" when="1418-03-29" where="Bayeux">
+                  <desc>Same to <persName ref="#John_Conners">John Conners</persName> in tail male of the lordship of Repenty of <persName ref="#John_Harmoville">John Harmoville</persName> and of the possessions of <persName ref="#Peter_de_Freuy">Peter de Freuy</persName>, rebels, by homage and the rendering yearly 40 pence to the King.</desc>
+               </event>
+               <event type="safe-conduct" when="1418-03-23" where="Bayeux">
+                  <desc>Safe-conduct for <persName ref="#John_Pyket">John Pyket</persName> coming to the King.</desc>
+               </event>
+               <event type="commission" when="1418-04-01" where="Bayeux">
+                  <desc>Commission to <persName ref="#Henry_Bishop_of_Winchester">Henry</persName>, Bishop of Winchester, <persName ref="#Nicholas_Bishop_of_Bath">Nicholas</persName>, Bishop of Bath and Wells, <persName ref="#John_Bishop_of_Coventry">John</persName>, Bishop of Coventry and Lichfield and <persName ref="#Thomas_Polton">Thomas Polton</persName>, Dean of York, to receive the oath of fealty from <persName ref="#John_Langret">John Langret</persName>, Bishop of Bayeux.</desc>
+               </event>
+               <event type="safe-conduct" when="1418-04-01" where="Bayeux">
+                  <desc>Safe-conduct for <persName ref="#Lewis_Thesart">Lewis Thesart</persName> coming from Neuilly castle to the King</desc>
+               </event>
+               <event type="grant" when="1418-04-03" where="Bayeux">
+                  <desc>Grant to <persName ref="#John_Parker">John Parker</persName> in tail male of the house at Argancy, near Bayeux, of <persName ref="#Roberta_le_Boiz">Roberta le Boiz</persName>, wife of <persName ref="#Robert_de_la_Hay">Robert de la Hay</persName>, by homage and the rendering yearly a bow and a sheaf of broad arrows to the King.</desc>
+               </event>
+               <event type="grant" when="1418-04-04" where="Bayeux">
+                  <desc>Same to <persName ref="#Stephen_D_Estuvaulx">Stephen D’Estuvaulx</persName> in tail male of the house at Gueron Bayeux, together with the possessions of <persName ref="#Lawrence_de_Carou">Lawrence de Carou</persName> and <persName ref="#John_Lerfault">John Lerfault</persName>, absentees, by homage and the rendering yearly a cross bow to the King.</desc>
+               </event>
+               <event type="safe-conduct" when="1418-04-02" where="Bayeux">
+                  <desc>Safe conduct for <persName ref="#John_Pyket">John Pyket</persName> coming to the King.</desc>
+               </event>
+               <event type="livery" when="1418-04-02" where="Bayeux">
+                  <desc>Livery to <persName ref="#Henry_Baubignon">Henry</persName>, son of <persName ref="#John_Baubignon">John Baubignon</persName>.</desc>
+               </event>
+               <event type="restitution" when="1418-04-05" where="Bayeux">
+                  <desc>Grant to <persName ref="#John_de_Foucqueville">John de Foucqueville</persName>, of the possessions held by him before the coming of the King to Normandy.</desc>
+               </event>
+               <event type="safe-conduct" when="1418-04-18" where="Bayeux">
+                  <desc>Safe-conduct for <persName ref="#John_de_Larchamp">John de Larchamp</persName>, coming to the King.</desc>
+               </event>
+               <event type="appointment" when="1418-04-04" where="Bayeux">
+                  <desc>Appointment of <persName ref="#Peter_Taillebois">Peter Taillebois</persName> as keeper of the seal for recognizances at Bayeux.</desc>
+               </event>
+               <event type="grant" when="1418-04-05" where="Bayeux">
+                  <desc>Grant of the castle and lordship of Briqueville-sur-Mer to <persName ref="#John_Earl_of_Huntingdon">John</persName>, Earl of Huntingdon, in tail male, by homage and the rendering yearly a chest of quarrels to the King ; also of the messuage in the parish of S. Stephen, Caen, of <persName ref="#">William Balargent</persName>, late citizen of Caen.</desc>
+               </event>
+            </listEvent>
+         </div>
+          <div type="membrane" n="39">
+               <listEvent>
+                  <event type="safe-conduct" when="1418-04-07" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Cudard_de_Fouilliac">Cudard de Fouilliac</persName>, secretary of the Duke of Orleans, prisoner of the King, and others coming to England touching the ransom of Duke's brother <persName ref="#John_Duke_s_brother">John</persName>.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-07" where="Bayeux">
+                     <desc>Grant to <persName ref="#William_Hasand">William Hasand</persName> in tail male of the possessions of the late <persName ref="#John_Suhard">John Suhard</persName> and his brother <persName ref="#Roger_Suhard">Roger Suhard</persName> rebel, now a rebel, by homage and the rendering yearly a poleaxe to the King.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-07" where="Bayeux">
+                     <desc>Same to <persName ref="#Peter_Logge">Peter Logge</persName> in tail male of the possessions in Caen of <persName ref="#William_le_Gars">William le Gars</persName>, by homage and the rendering yearly a sheaf of arrows to the King.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-06" where="Bayeux">
+                     <desc>Same to <persName ref="#Thomas_Lyndford">Thomas Lyndford</persName>, one of the yeoman of the King's stables, in tail male of the house and lands of <persName ref="#William_de_Vaux">William de Vaux</persName>, a rebel, within the parish of Vaux-sur-Eure, in the bailiwick of Bayeux, by homage and the rendering yearly a belt for a coat of mail to the King.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-03" where="Bayeux">
+                     <desc>Same for life to <persName ref="#William_Wymyngton">William Wymyngton</persName> of the house of <persName ref="#John_Garnere">John Garnere</persName>, a citizen of Argentan, a rebel.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-06" where="Bayeux">
+                     <desc>Restitution of its temporalities to the church of S. Marcouf of Bayeux.</desc>
+                  </event>
+                  <event type="licence" when="1418-04-18" where="Bayeux">
+                     <desc>Licence for one year to brethren and sisters of congregation of the blind of S. Gracien, near Bayeux, to take dead wood from King's forests, excepting on Sundays and the annual fêtes.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-18" where="Bayeux">
+                     <desc>Grant to <persName ref="#John_Bromley">John Bromley</persName> in tail male of the house of Molay-Bacon, Bayeux, together with the possessions of <persName ref="#Alan_de_Beaumont">Alan de Beaumont</persName>, a rebel, by homage and the rendering yearly a belt for a coat of mail to the King.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-19" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Guillerm_de_Champsdivers">Guillaume Champdivers</persName>, knight, coming to the King.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-03" where="Bayeux">
+                     <desc>Grant to <persName ref="#William_Rothelane">William Rothelane</persName> in tail male of the possessions of <persName ref="#Oliver_Folygny">Oliver Folygny</persName> and <persName ref="#James_Folygny">James</persName>, his brother, rebels, by homage and the rendering yearly the head of a lance to the King.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-14" where="Bayeux">
+                     <desc>Same to the Abbey of S. Mary de la Trappe of the custody of its temporalities.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-13" where="Bayeux">
+                     <desc>Same to <persName ref="#Andrew_Ballam">Andrew Ballam</persName> and his heirs of the messuage in parish of S. Peter, Caen, of <persName ref="#John_Bidault">John Bidault</persName>, a rebel.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-22" where="Caen">
+                     <desc>Safe conduct for <persName ref="#Richard_Gauter">Richard Gauter</persName>, of the parish of S. Peter, Caen, cordwainer, coming to the King.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-26" where="Caen">
+                     <desc>Safe conduct for <persName ref="#Robert_Moutiers">Robert Moutiers</persName> of Bayeux.</desc>
+                  </event>
+                  <event type="licence" when="1418-04-27" where="Caen">
+                     <desc>Licence to <persName ref="#Richard_Bristowe">Richard Bristowe</persName>, to ship 800 quarters of malt and other goods bought in England to Harfleur and other ports in Normandy.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-27" where="Caen">
+                     <desc>Restitution of its temporalities to the Abbey of S. Mary de Belle Etoile, in the comté of Vire.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-27" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Benedict_le_Harpeur">Benedict</persName>, <persName ref="#Nicholas_le_Harpeur">Nicholas</persName> and <persName ref="#Ralph_le_Harpeur">Ralph le Harpeur</persName>, <persName ref="#Richard_Muriel">Richard</persName> and <persName ref="#Peter_Muriel">Peter Muriel</persName>, <persName ref="#John_Adeline">John Adeline</persName>, <persName ref="#John_Gosselin">John Gosselin</persName>, senior, <persName ref="#Peter_Gosselin">Peter Gosselin</persName>, junior all of Bayeux ; and for <persName ref="#John_le_Harpeur">John le Harpeur</persName>, <persName ref="#John_Gourdec">John Gourdec</persName>, <persName ref="#Richard_Lucas">Richard Lucas</persName>, <persName ref="#John_le_Maigre">John le Maigre</persName>, and <persName ref="#Peter_le_Maigre">Peter le Maigre</persName>, coming to the King.</desc>
+                  </event>
+               </listEvent>
+             </div>
+          <div type="membrane" n="38">
+               <listEvent>
+                  <event type="grant" when="1418-04-10" where="Bayeux">
+                     <desc>Grant to <persName ref="#Joan_de_Boys_Hubault">Joan de Boys Hubault</persName>, widow of <persName ref="#Robert_de_Thibouville">Robert de Thibouville</persName>, knight, of the lands she held before the last coming of the king to Normandy.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-12" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#John_de_Maugneville">John de Maugneville</persName>, knight, coming from Brittany to the King.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-11" where="Bayeux">
+                     <desc>Same for <persName ref="#Joan_de_Ver">Joan de Ver</persName> widow of <persName ref="#James_de_Foligny">James de Foligny</persName>, knight, coming to the King.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-11" where="Bayeux">
+                     <desc>Restitution of its temporalities to the Abbey of S. Evroult.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-11" where="Bayeux">
+                     <desc>Restitution of temporalities to the convent of Tailleville, Caen, to <persName ref="#Richard_de_la_Fosse">Richard de la Fosse</persName>, prior.</desc>
+                  </event>
+                  <event type="appointment" when="1418-04-12" where="Bayeux">
+                     <desc>Appointment of <persName ref="#Stephen_Barate">Stephen Barate</persName>, citizen of Bayeux, as weigher of all saleable goods coming to Bayeux.</desc>
+                  </event>
+                  <event type="attorney" when="1418-04-12" where="Bayeux">
+                     <desc>Letters of attorney to <persName ref="#John_Popham">John Popham</persName>, knight, in the service of the king in Normandy, in the names of <persName ref="#John_Frank">John Frank</persName>, clerk, and <persName ref="#William_Westbury">William Westbury</persName>.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-10" where="Bayeux">
+                     <desc>Grant to <persName ref="#Philip_le_Clerc">Philip le Clerc</persName>, chaplain of the parish of Lion-sur-Mer, of the lands he held before the last coming of the King to Normandy.</desc>
+                  </event>
+                  <event type="attorney" when="1418-04-13" where="Bayeux">
+                     <desc>Letters of attorney to <persName ref="#John_Gray">John Gray</persName>, knight, in the service of the King in Normandy, in the names of <persName ref="#Thomas_Caldewell">Thomas Caldewell</persName>, of Lincoln, clerk, and <persName ref="#Alan_Humburston">Alan Humburston</persName>, of the same county.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-13" where="Bayeux">
+                     <desc>Restitution of the temporalities of the convent of Briouse to <persName ref="#Robert_Heron">Robert Heron</persName>, prior.</desc>
+                  </event>
+                  <event type="appointment" when="1418-04-12" where="Bayeux">
+                     <desc>Appointment of <persName ref="#John_Meigniant">John Meigniant</persName> as verderor of Mont de Lencre, in the vicomté of Vire.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-06" where="Bayeux">
+                     <desc>Grant to <persName ref="#John_Botelier">John Botelier</persName> in tail male of the manor of Riqueville, in the comté of Caen of <persName ref="#Robert_Riqueville">Robert</persName> and <persName ref="#William_Riqueville">William Riqueville</persName>, rebels ; also of the possessions of <persName ref="#Peter_Goudenin">Peter</persName> and <persName ref="#Richard_Goudenin">Richard Goudenin</persName>, rebels ; also of a certain messuage in Caen of <persName ref="#John_Gesors">John Gesors</persName>, a rebel, by homage and the rendering yearly a sword of Gascony to the King.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-13" where="Bayeux">
+                     <desc>Restitution of the temporalities of Bayeux to the Dean.</desc>
+                  </event>
+                  <event type="grant" when="1418-04-14" where="Bayeux">
+                     <desc>Grant to the Abbey of S. Mary of Montmorell, Avranches, of the custody of its temporalities.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-10" where="Bayeux">
+                     <desc>Same to <persName ref="#Joan_de_Rupalay">Joan de Rupalay</persName>, widow of <persName ref="#Robert_de_Bloville">Robert de Bloville</persName>, of the possessions she held within the comté of Bayeux before the last coming of the King to Normandy.</desc>
+                  </event>
+                  <event type="grant" when="1418-03-26" where="Bayeux">
+                     <desc>Same to <persName ref="#John_Harpeden">John Harpeden</persName>, knight, in tail male of the Castle and lordship of Chantelou, and the manors of Appelly and Creaunces within the comtés of Coutances and Avranches, of <persName ref="#Joan_de_Champayn">Joan de Champayn</persName>, widow of <persName ref="#Nicholas_Paignel">Nicholas Paignel</persName>, absentee, by homage and the rendering yearly a sword to the King.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-18" where="Bayeux">
+                     <desc>Same to <persName ref="#Joan_Liebart">Joan Liebart</persName>, widow of <persName ref="#William_de_Vauchelles">William de Vauchelles</persName>, of the possessions she held before the last coming of the king to Normandy.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-18" where="Bayeux">
+                     <desc>Grant for life to <persName ref="#Joan_de_la_Rochelle">Joan de la Rochelle</persName>, sworn, widow of <persName ref="#Anthony_de_Wargmez">Anthony de Wargmez</persName>, of Caen.</desc>
+                  </event>
+                  <event type="licence" when="1418-04-18" where="Bayeux">
+                     <desc>Licence for one year to the brethren of the Priory of Saint Nicholas de la Maladerie, near Bayeux, to be represented by attorney in all their suits before the secular judges without the permission of their prior.</desc>
+                  </event>
+                  <event type="licence" when="1418-04-18" where="Bayeux">
+                     <desc>Same for the brethren of the Hôtel-Dieu, near Bayeux.</desc>
+                  </event>
+               </listEvent>
+             </div>
+          <div type="membrane" n="37">
+               <listEvent>
+                  <event type="restitution" when="1418-04-26" where="Bayeux">
+                     <desc>Restitution of its temporalities to the Abbey of S. Lô.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-26" where="Bayeux">
+                     <desc>Restitution of the temporalities of the house of S. John of Jerusalem at Breteville-Labarel, Seez, to <persName ref="#Nicholas_de_Mouster">Nicholas de Mouster</persName>, Master.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-13" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Robert_la_Hure">Robert la Hure</persName> coming to Paris and thence to the King.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-13" where="Bayeux">
+                     <desc>Same for <persName ref="#Richard_de_Beuseville">Richard de Beuseville</persName>, canon of Bayeux, coming to the King.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-15" where="Bayeux">
+                     <desc>Restitution of the temporalities to <persName ref="#Maturine_Pilliehonne">Maturine Pilliehonne</persName>, Prioress of S. Mary de la Came, Bayeux.</desc>
+                  </event>
+                  <event type="dower" when="1418-04-13" where="Bayeux">
+                     <desc>Dower to <persName ref="#Mary_Graunt">Mary</persName>, widow of <persName ref="#Lewis_Graunt">Lewis Graunt</persName>.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-13" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Simon_Basire">Simon Basire</persName> coming to the King.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-14" where="Bayeux">
+                     <desc>Restitution of its temporalities to the Church of S. Mary de Frigidovico Caen.</desc>
+                  </event>
+                  <event type="grant" when="1418-05-21" where="Bayeux">
+                     <desc>Grant to <persName ref="#Joan_l_Englois">Joan</persName>, widow of <persName ref="#John_l_Englois">John l'Englois</persName>, of the possessions she held before the last coming of the King to Normandy.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-14" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Nicholas_Philip">Nicholas Philip</persName>, of Bayeux, coming to the King.</desc>
+                  </event>
+                  <event type="grant" when="1418-03-24" where="Bayeux">
+                     <desc>Grant of certain tolls on wine, beer, and salt to the burgesses of Falaise for the repair of their walls and of their clock and foutains.</desc>
+                  </event>
+                  <event type="licence" when="1418-03-24" where="Bayeux">
+                     <desc>Licence to the citizen of Falaise to establish a hospital for the poor at Falaise and to hold the advowson of the parish church of S. George of Mortain.</desc>
+                  </event>
+                  <event type="licence" when="1418-04-18" where="Bayeux">
+                     <desc>Licence to <persName ref="#Edward_Earl_of_Mortagne">Edward</persName>, Earl of Mortagne to hold his courts within the town of Vire in order to be out of the reach of annoyance from the enemy.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-18" where="Bayeux">
+                     <desc>Safe-conduct for <persName ref="#Laurence_de_Carou">Laurence de Carou</persName> and <persName ref="#John_Ersfault">John Ersfault</persName> coming to the King.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-18" where="Bayeux">
+                     <desc>Same for <persName ref="#Roger_le_Pelerin">Roger le Pelerin</persName> and <persName ref="#John_le_Pelerin">John</persName> his son; <persName ref="#John_Boudoum">John Boudoum</persName> and <persName ref="#Peter_Boudoum">Peter</persName> his son ; <persName ref="#Ralph_Boudoum">Ralph</persName>, brother of the said Peter, and <persName ref="#Giles_Boudoum">Giles</persName>, brother of the said Ralph; <persName ref="#Philip_Summoneaulx">Philip Summoneaulx</persName> and <persName ref="#John_Summoneaulx">John</persName> his son; <persName ref="#Ralph_de_Basco">Ralph de Basco</persName> and <persName ref="#Thomas_de_Basco">Thomas</persName> his son; and <persName ref="#Michael_Sufflet">Michael Sufflet</persName>, peasants, coming to the King.</desc>
+                  </event>
+                  <event type="protection" when="1418-04-18" where="Bayeux">
+                     <desc>Protection to <persName ref="#William_de_la_Haie">William de la Haie</persName>, merchant, and his servants, conveying wine and other goods to various parts of Normandy for the use of the King's subjects.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-18" where="Bayeux">
+                     <desc>Grant to <persName ref="#Joan_Bescog">Joan</persName>, widow of <persName ref="#Jordan_Bescog">Jordan Bescog</persName>, of Bayeux, of the possessions she held before the last coming of the king to Normandy.</desc>
+                  </event>
+                  <event type="restitution" when="1418-04-21" where="Bayeux">
+                     <desc>Same to <persName ref="#John_de_Buret">John de Buret</persName> and his heirs of the possessions of his father, now a rebel, by homage and the rendering yearly a dagger to the King. The said <persName ref="#John_de_Buret">John de Buret</persName> to maintain his mother, brothers, and sisters, during their lifetime.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-04-25" where="Bayeux">
+                     <desc>Safe-conduct for <persName ref="#Adam_Bishop_of_Mans">Adam</persName>, Bishop of Mans, coming to the King.</desc>
+                  </event>
+                  <event type="protection" when="1418-03-22" where="Bayeux">
+                     <desc>Protection to <persName ref="#John_Dubey">John Dubey</persName>, chaplain, coming in quest of certain goods belonging to <persName ref="#Gervais_Larchamp">Gervais Larchamp</persName>, Sub-dean of S. Mary of Bayeux, which are to be brought to Bayeux.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-03-26" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#John_Larchamp">John Larchamp</persName> coming to the King.</desc>
+                  </event>
+                  <event type="power" when="1418-03-22" where="Bayeux">
+                     <desc>Power for <persName ref="#Reginald_West">Reginald West</persName>, captain of S. Lo, to receive such of the inhabitants of S. Lô and its neighbourhood as wish to take the oath of fealty.</desc>
+                  </event>
+                  <event type="power" when="1418-03-24" where="Bayeux">
+                     <desc>Same for <persName ref="#John_Smythes">John Smythes</persName>, captain of the town of Vire, to receive such of the inhabitants of Vire and its neighbourhood as wish to take the oath of fealty.</desc>
+                  </event>
+                  <event type="safe-conduct" when="1418-03-29" where="Bayeux">
+                     <desc>Safe conduct for <persName ref="#Matthew_de_Aula">Matthew de Aula</persName> and <persName ref="#John_de_Jusseyo">John de Jusseyo</persName> coming from the castle of Nully-Levêque, with their retinue, to the King.</desc>
+                  </event>
+               </listEvent>
+          </div>
+      </body>
+   </text>
+</TEI>

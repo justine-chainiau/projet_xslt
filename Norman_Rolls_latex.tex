@@ -1,0 +1,1842 @@
+\documentclass[a4paper,12pt,twoside]{book}
+    \usepackage[Conny]{fncychap}
+    
+    \usepackage[splitindex]{imakeidx}
+    \makeindex[name=indiv,title=Index des noms de personnes]
+   
+    \usepackage{hyperref}
+    \hypersetup{
+    pdfauthor = {Justine, Chainiau},
+    pdftitle = {Calendar of the Norman Rolls - Henry V - Edition First Part},
+    pdfsubject = {Norman Rolls},
+    pdfkeywords = {rouleaux} {Henry V} {guerre de Cent Ans} {Normandie}
+    }
+    
+    \usepackage[T1]{fontenc}
+    \usepackage[english,french]{babel}
+    
+    \usepackage[margin=2.5cm]{geometry} 
+    \usepackage{setspace} 
+    \onehalfspacing 
+    \setlength\parindent{1cm}\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\begin{Large}
+				\textbf{Justine Chainiau}\\
+			\end{Large}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\begin{center}\rule{2cm}{0.02cm}\end{center}
+			\bigskip
+			\bigskip
+			\bigskip
+			
+			\begin{Huge}
+				\textbf{Calendar of the Norman Rolls 
+               Henry V  First Part}\\
+			\end{Huge}
+			\bigskip
+			\bigskip
+			
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\begin{large}
+			\end{large}
+			\vfill
+			
+			\begin{large}
+               Devoir XML TEI - Edition 
+            2023\end{large}
+			
+		\end{center}
+	\end{titlepage}
+	\newpage
+        
+    
+    \tableofcontents   
+    
+	\chapter{Résumé}
+	\medskip
+        
+     Contient \textit{Calendar of the Norman Rolls 
+               Henry V  First Part}, par Justine Chainiau.
+        
+    \bigskip
+        
+    \begin{Large} 
+        \section{Encodage réalisé dans le cadre du cours XML TEI du Master 2 TNAH. }
+    \end{Large}
+        
+    \medskip
+        
+    Cet encodage a été réalisé à partir de la numérisation de l'édition des Norman Rolls disponible sur Internet Archive.
+            Le schéma d’encodage choisi pour les Norman Rolls est simple : les actes sont encodés sous forme de listes d’événements pour chaque membrane. 
+            Cette structuration organisée du contenu facilite la lisibilité tout en mettant valeur la typologie, la date et la localisation de chaque acte : des informations clés permettant de reconstituer le parcours des Anglais et leur administration du territoire. 
+            Les personnes concernées sont signalées au sein de l’encodage de chaque acte puis répertoriées dans une liste présente dans le header. 
+            Cela permet d’esquisser le profil des individus mentionnés (activités, statut, lieu de résidence, relations …) et leurs rapports avec le nouveau pouvoir en place : hommages et rébellions, ainsi que les enjeux économiques générés (restitutions, donations … ). 
+            A terme, ces succinctes biographies, croisée avec d’autres sources locales (comme les registre du tabellionage de Caen par exemple) pourraient servir à la constitution d’une base prosopographique permettant d’étudier l’attitude des normands, et plus particulièrement de certaines classes sociales, vis-à-vis des Anglais. 
+            Une édition interactive (sous forme de carte) des Norman Rolls donnant à la fois accès au contenu des actes et aux informations concernant les individus (prosopographie) tout en retraçant le trajet d’Henry V et de sa chancellerie serait intéressante. 
+            Néanmoins, l’encodage manuel de ces rouleaux et le répertoriage de tous les individus mentionnés reste un travail extrêmement chronophage dont l’édition intégrale représenterait une entreprise colossale.
+            Toutefois, des chercheurs de l'Université de Southampton ont travaillé à une édition sous forme de tableur (Excel) de la moitié de ces rouleaux. Il serait alors pertinent d'envisager la conception d'une chaîne de traitement permettant la transformation de ce document Excel contenant les éditions en un fichier XML (TEI).
+         
+        
+    \bigskip
+        
+    \begin{Large}
+    \section{Calendar of the Norman Rolls - Henry V}
+    \end{Large}
+        
+    \medskip
+        
+    Les Norman Rolls sont des rouleaux émis par la chancellerie anglaise, contenant l’enregistrement des actes concernant l’administration de la Normandie par les souverains Anglais. 
+               La conquête et l’occupation du duché de Normandie par Henry V durant la guerre de Cent Ans donnent lieu à des enrôlements. 
+               Les rouleaux concernant cette période sont au nombre de dix, divisés par années de règne. 
+               Ils contiennent 810 membranes, 697 d’entre elles comportent des entrées et les actes sont recopiés à la fois sur les faces et les dorsales. 
+               Les membranes ont été cousues ensemble à la fin de chaque année de règne, en conséquence, les entrées ne respectent pas un ordre chronologique. 
+               La rédaction des actes commence le jour du débarquement du souverain anglais à l'embouchure de la Touques, le 1er août 1417, et se termine juste avant sa mort en 1422. 
+               Henry V mène une politique de conciliation entre les habitants et les soldats anglais. 
+               Pour cela, une série d'ordonnances disciplinaires relatives aux garnisons et d’actes de donations ou de confirmations de possessions est émise puis enregistrée au sein des Norman Rolls. 
+               La typologie des actes est variée : gestion des biens et des personnes (licences, sauf-conduits), administration des localités normandes. 
+               La nature des actes donne des indications sur le statut des individus mais aussi sur leurs attitudes vis-à-vis de l’autorité d’Outre-Manche. 
+               Pour chaque acte sont en premier indiqués la date et le lieu de rédaction, ce qui contribue à situer les événements dans un contexte spatio-temporel ainsi qu’à restituer une partie des activités de la chancellerie anglaise. 
+               Ensuite, leur lecture renseigne sur les lieux concernés et les personnes impliquées de manière assez précise puisque l’on a parfois la mention des activités, des qualités des individus, de leurs possessions ou de leurs liens familiaux. 
+               Ces rouleaux représentent une source administrative d’envergure pour l’étude de la période Lancastrienne. 
+               Après la mort d’Henry V, ils ont été rapportés en Angleterre pour être conservés dans la Tour de Londres. 
+               L’accès à cette source peut se faire en ligne par consultation des éditions anglaises disponibles au sein des quarante et unième et quarante deuxième rapports annuels du conservateur adjoint des archives publiques de 1880 et 1881. 
+        
+    
+    \newpage
+    \chapter{Norman Rolls}
+        \section{Membrane 41}
+        
+            \subsection{1418-03-21, Bayeux}
+            
+                  Grant to William Hotoft\index[indiv]{William Hotoft} in tail male of the lordship of Asseville of Ralph Jone\index[indiv]{Ralph Jone}, deceased, also of the manor of Herville Caen of John Cottard\index[indiv]{John Cottard}, deceased, by homage and the rendering yearly a sword to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to William Porter\index[indiv]{William Porter}, esquire, in tail male of the possessions of William d'Assy\index[indiv]{William d'Assy}, a rebel, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Power for Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, to treat with Guillerm de Champsdivers\index[indiv]{Guillerm de Champsdivers}, knight, Chamberlain of John\index[indiv]{John}, Duke of Burgundy, for the prorogation of the truce with the Duke of Burgundy.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Commission to Thomas Walshe\index[indiv]{Thomas Walshe} to procure workmen from London and its suburbs to make harps for the King's use.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Dower to Joan de Brucourt\index[indiv]{Joan de Brucourt}, widow of Gerard de Tournebu\index[indiv]{Gerard de Tournebu}.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Commission to Guillerm de Champdivers\index[indiv]{Guillerm de Champdivers} to prorogue the truce between the King of England and the Duke of Burgundy.
+               
+            \subsection{1418-03-28, Bayeux}
+            
+                  Grant to Ralph Neville\index[indiv]{Ralph Neville} in tail male of the possessions of William Desmoulins\index[indiv]{William Desmoulins} and Robert de Freville\index[indiv]{Robert de Freville}, knights, rebels, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-25, Bayeux}
+            
+                  Same for life to Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, of the house in Caen called l'Ostell Bavent [l’hôtel Bavent].
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to Henry Flynthalgh\index[indiv]{Henry Flynthalgh} in tail male of the possessions of John Caumont\index[indiv]{John Caumont}, a rebel, by homage and the rendering yearly a lance to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same for life to William Harrington\index[indiv]{William Harrington}, knight, of the house in Caen of Drugo de Beaussy\index[indiv]{Drugo de Beaussy}, a rebel.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Restitution of its temporalities to the Convent of S. Mary of Villers-Lequinet, near Falaise.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Grant to Richard Geffrey\index[indiv]{Richard Geffrey}, minstrel, in tail male of the land of Vaux-sur-Mer and of the other possessions in Caen of Benedict le Coutelier\index[indiv]{Benedict le Coutelier}, a rebel, by homage and the rendering yearly a dagger to the King.
+               
+            \subsection{1418-03-29, Bayeux}
+            
+                  Same to John Conners\index[indiv]{John Conners} in tail male of the lordship of Repenty of John Harmoville\index[indiv]{John Harmoville} and of the possessions of Peter de Freuy\index[indiv]{Peter de Freuy}, rebels, by homage and the rendering yearly 40 pence to the King.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Safe-conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Commission to Henry\index[indiv]{Henry}, Bishop of Winchester, Nicholas\index[indiv]{Nicholas}, Bishop of Bath and Wells, John\index[indiv]{John}, Bishop of Coventry and Lichfield and Thomas Polton\index[indiv]{Thomas Polton}, Dean of York, to receive the oath of fealty from John Langret\index[indiv]{John Langret}, Bishop of Bayeux.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Safe-conduct for Lewis Thesart\index[indiv]{Lewis Thesart} coming from Neuilly castle to the King
+               
+            \subsection{1418-04-03, Bayeux}
+            
+                  Grant to John Parker\index[indiv]{John Parker} in tail male of the house at Argancy, near Bayeux, of Roberta le Boiz\index[indiv]{Roberta le Boiz}, wife of Robert de la Hay\index[indiv]{Robert de la Hay}, by homage and the rendering yearly a bow and a sheaf of broad arrows to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Same to Stephen D’Estuvaulx\index[indiv]{Stephen D’Estuvaulx} in tail male of the house at Gueron Bayeux, together with the possessions of Lawrence de Carou\index[indiv]{Lawrence de Carou} and John Lerfault\index[indiv]{John Lerfault}, absentees, by homage and the rendering yearly a cross bow to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Safe conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Livery to Henry\index[indiv]{Henry}, son of John Baubignon\index[indiv]{John Baubignon}.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant to John de Foucqueville\index[indiv]{John de Foucqueville}, of the possessions held by him before the coming of the King to Normandy.
+               
+            \subsection{1418-04-18, Bayeux}
+            
+                  Safe-conduct for John de Larchamp\index[indiv]{John de Larchamp}, coming to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Appointment of Peter Taillebois\index[indiv]{Peter Taillebois} as keeper of the seal for recognizances at Bayeux.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant of the castle and lordship of Briqueville-sur-Mer to John\index[indiv]{John}, Earl of Huntingdon, in tail male, by homage and the rendering yearly a chest of quarrels to the King ; also of the messuage in the parish of S. Stephen, Caen, of William Balargent\index[indiv]{William Balargent}, late citizen of Caen.
+               
+            \subsection{1418-04-07, Bayeux}
+            
+                     Safe conduct for Cudard de Fouilliac\index[indiv]{Cudard de Fouilliac}, secretary of the Duke of Orleans, prisoner of the King, and others coming to England touching the ransom of Duke's brother John\index[indiv]{John}.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Grant to William Hasand\index[indiv]{William Hasand} in tail male of the possessions of the late John Suhard\index[indiv]{John Suhard} and his brother Roger Suhard\index[indiv]{Roger Suhard} rebel, now a rebel, by homage and the rendering yearly a poleaxe to the King.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Same to Peter Logge\index[indiv]{Peter Logge} in tail male of the possessions in Caen of William le Gars\index[indiv]{William le Gars}, by homage and the rendering yearly a sheaf of arrows to the King.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Same to Thomas Lyndford\index[indiv]{Thomas Lyndford}, one of the yeoman of the King's stables, in tail male of the house and lands of William de Vaux\index[indiv]{William de Vaux}, a rebel, within the parish of Vaux-sur-Eure, in the bailiwick of Bayeux, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Same for life to William Wymyngton\index[indiv]{William Wymyngton} of the house of John Garnere\index[indiv]{John Garnere}, a citizen of Argentan, a rebel.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Restitution of its temporalities to the church of S. Marcouf of Bayeux.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to brethren and sisters of congregation of the blind of S. Gracien, near Bayeux, to take dead wood from King's forests, excepting on Sundays and the annual fêtes.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to John Bromley\index[indiv]{John Bromley} in tail male of the house of Molay-Bacon, Bayeux, together with the possessions of Alan de Beaumont\index[indiv]{Alan de Beaumont}, a rebel, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-19, Bayeux}
+            
+                     Safe conduct for Guillaume Champdivers\index[indiv]{Guillaume Champdivers}, knight, coming to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Grant to William Rothelane\index[indiv]{William Rothelane} in tail male of the possessions of Oliver Folygny\index[indiv]{Oliver Folygny} and James\index[indiv]{James}, his brother, rebels, by homage and the rendering yearly the head of a lance to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Same to the Abbey of S. Mary de la Trappe of the custody of its temporalities.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same to Andrew Ballam\index[indiv]{Andrew Ballam} and his heirs of the messuage in parish of S. Peter, Caen, of John Bidault\index[indiv]{John Bidault}, a rebel.
+                  
+            \subsection{1418-04-22, Caen}
+            
+                     Safe conduct for Richard Gauter\index[indiv]{Richard Gauter}, of the parish of S. Peter, Caen, cordwainer, coming to the King.
+                  
+            \subsection{1418-04-26, Caen}
+            
+                     Safe conduct for Robert Moutiers\index[indiv]{Robert Moutiers} of Bayeux.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Licence to Richard Bristowe\index[indiv]{Richard Bristowe}, to ship 800 quarters of malt and other goods bought in England to Harfleur and other ports in Normandy.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Restitution of its temporalities to the Abbey of S. Mary de Belle Etoile, in the comté of Vire.
+                  
+            \subsection{1418-04-27, Bayeux}
+            
+                     Safe conduct for Benedict\index[indiv]{Benedict}, Nicholas\index[indiv]{Nicholas} and Ralph le Harpeur\index[indiv]{Ralph le Harpeur}, Richard\index[indiv]{Richard} and Peter Muriel\index[indiv]{Peter Muriel}, John Adeline\index[indiv]{John Adeline}, John Gosselin\index[indiv]{John Gosselin}, senior, Peter Gosselin\index[indiv]{Peter Gosselin}, junior all of Bayeux ; and for John le Harpeur\index[indiv]{John le Harpeur}, John Gourdec\index[indiv]{John Gourdec}, Richard Lucas\index[indiv]{Richard Lucas}, John le Maigre\index[indiv]{John le Maigre}, and Peter le Maigre\index[indiv]{Peter le Maigre}, coming to the King.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Joan de Boys Hubault\index[indiv]{Joan de Boys Hubault}, widow of Robert de Thibouville\index[indiv]{Robert de Thibouville}, knight, of the lands she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Safe conduct for John de Maugneville\index[indiv]{John de Maugneville}, knight, coming from Brittany to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Same for Joan de Ver\index[indiv]{Joan de Ver} widow of James de Foligny\index[indiv]{James de Foligny}, knight, coming to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Evroult.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of temporalities to the convent of Tailleville, Caen, to Richard de la Fosse\index[indiv]{Richard de la Fosse}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of Stephen Barate\index[indiv]{Stephen Barate}, citizen of Bayeux, as weigher of all saleable goods coming to Bayeux.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Letters of attorney to John Popham\index[indiv]{John Popham}, knight, in the service of the king in Normandy, in the names of John Frank\index[indiv]{John Frank}, clerk, and William Westbury\index[indiv]{William Westbury}.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Philip le Clerc\index[indiv]{Philip le Clerc}, chaplain of the parish of Lion-sur-Mer, of the lands he held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Letters of attorney to John Gray\index[indiv]{John Gray}, knight, in the service of the King in Normandy, in the names of Thomas Caldewell\index[indiv]{Thomas Caldewell}, of Lincoln, clerk, and Alan Humburston\index[indiv]{Alan Humburston}, of the same county.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of the convent of Briouse to Robert Heron\index[indiv]{Robert Heron}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of John Meigniant\index[indiv]{John Meigniant} as verderor of Mont de Lencre, in the vicomté of Vire.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Grant to John Botelier\index[indiv]{John Botelier} in tail male of the manor of Riqueville, in the comté of Caen of Robert\index[indiv]{Robert} and William Riqueville\index[indiv]{William Riqueville}, rebels ; also of the possessions of Peter\index[indiv]{Peter} and Richard Goudenin\index[indiv]{Richard Goudenin}, rebels ; also of a certain messuage in Caen of John Gesors\index[indiv]{John Gesors}, a rebel, by homage and the rendering yearly a sword of Gascony to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of Bayeux to the Dean.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Grant to the Abbey of S. Mary of Montmorell, Avranches, of the custody of its temporalities.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Same to Joan de Rupalay\index[indiv]{Joan de Rupalay}, widow of Robert de Bloville\index[indiv]{Robert de Bloville}, of the possessions she held within the comté of Bayeux before the last coming of the King to Normandy.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Same to John Harpeden\index[indiv]{John Harpeden}, knight, in tail male of the Castle and lordship of Chantelou, and the manors of Appelly and Creaunces within the comtés of Coutances and Avranches, of Joan de Champayn\index[indiv]{Joan de Champayn}, widow of Nicholas Paignel\index[indiv]{Nicholas Paignel}, absentee, by homage and the rendering yearly a sword to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same to Joan Liebart\index[indiv]{Joan Liebart}, widow of William de Vauchelles\index[indiv]{William de Vauchelles}, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant for life to Joan de la Rochelle\index[indiv]{Joan de la Rochelle}, sworn, widow of Anthony de Wargmez\index[indiv]{Anthony de Wargmez}, of Caen.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to the brethren of the Priory of Saint Nicholas de la Maladerie, near Bayeux, to be represented by attorney in all their suits before the secular judges without the permission of their prior.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for the brethren of the Hôtel-Dieu, near Bayeux.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Lô.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of the temporalities of the house of S. John of Jerusalem at Breteville-Labarel, Seez, to Nicholas de Mouster\index[indiv]{Nicholas de Mouster}, Master.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Robert la Hure\index[indiv]{Robert la Hure} coming to Paris and thence to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same for Richard de Beuseville\index[indiv]{Richard de Beuseville}, canon of Bayeux, coming to the King.
+                  
+            \subsection{1418-04-15, Bayeux}
+            
+                     Restitution of the temporalities to Maturine Pilliehonne\index[indiv]{Maturine Pilliehonne}, Prioress of S. Mary de la Came, Bayeux.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Dower to Mary\index[indiv]{Mary}, widow of Lewis Graunt\index[indiv]{Lewis Graunt}.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Simon Basire\index[indiv]{Simon Basire} coming to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Restitution of its temporalities to the Church of S. Mary de Frigidovico Caen.
+                  
+            \subsection{1418-05-21, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of John l'Englois\index[indiv]{John l'Englois}, of the possessions she held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Safe conduct for Nicholas Philip\index[indiv]{Nicholas Philip}, of Bayeux, coming to the King.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Grant of certain tolls on wine, beer, and salt to the burgesses of Falaise for the repair of their walls and of their clock and foutains.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Licence to the citizen of Falaise to establish a hospital for the poor at Falaise and to hold the advowson of the parish church of S. George of Mortain.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence to Edward\index[indiv]{Edward}, Earl of Mortagne to hold his courts within the town of Vire in order to be out of the reach of annoyance from the enemy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Safe-conduct for Laurence de Carou\index[indiv]{Laurence de Carou} and John Ersfault\index[indiv]{John Ersfault} coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for Roger le Pelerin\index[indiv]{Roger le Pelerin} and John\index[indiv]{John} his son; John Boudoum\index[indiv]{John Boudoum} and Peter\index[indiv]{Peter} his son ; Ralph\index[indiv]{Ralph}, brother of the said Peter, and Giles\index[indiv]{Giles}, brother of the said Ralph; Philip Summoneaulx\index[indiv]{Philip Summoneaulx} and John\index[indiv]{John} his son; Ralph de Basco\index[indiv]{Ralph de Basco} and Thomas\index[indiv]{Thomas} his son; and Michael Sufflet\index[indiv]{Michael Sufflet}, peasants, coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Protection to William de la Haie\index[indiv]{William de la Haie}, merchant, and his servants, conveying wine and other goods to various parts of Normandy for the use of the King's subjects.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of Jordan Bescog\index[indiv]{Jordan Bescog}, of Bayeux, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-21, Bayeux}
+            
+                     Same to John de Buret\index[indiv]{John de Buret} and his heirs of the possessions of his father, now a rebel, by homage and the rendering yearly a dagger to the King. The said John de Buret\index[indiv]{John de Buret} to maintain his mother, brothers, and sisters, during their lifetime.
+                  
+            \subsection{1418-04-25, Bayeux}
+            
+                     Safe-conduct for Adam\index[indiv]{Adam}, Bishop of Mans, coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Protection to John Dubey\index[indiv]{John Dubey}, chaplain, coming in quest of certain goods belonging to Gervais Larchamp\index[indiv]{Gervais Larchamp}, Sub-dean of S. Mary of Bayeux, which are to be brought to Bayeux.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Safe conduct for John Larchamp\index[indiv]{John Larchamp} coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Power for Reginald West\index[indiv]{Reginald West}, captain of S. Lo, to receive such of the inhabitants of S. Lô and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Same for John Smythes\index[indiv]{John Smythes}, captain of the town of Vire, to receive such of the inhabitants of Vire and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-29, Bayeux}
+            
+                     Safe conduct for Matthew de Aula\index[indiv]{Matthew de Aula} and John de Jusseyo\index[indiv]{John de Jusseyo} coming from the castle of Nully-Levêque, with their retinue, to the King.
+                  
+            \newpage
+        
+        \section{Membrane 40}
+        
+            \subsection{1418-03-21, Bayeux}
+            
+                  Grant to William Hotoft\index[indiv]{William Hotoft} in tail male of the lordship of Asseville of Ralph Jone\index[indiv]{Ralph Jone}, deceased, also of the manor of Herville Caen of John Cottard\index[indiv]{John Cottard}, deceased, by homage and the rendering yearly a sword to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to William Porter\index[indiv]{William Porter}, esquire, in tail male of the possessions of William d'Assy\index[indiv]{William d'Assy}, a rebel, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Power for Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, to treat with Guillerm de Champsdivers\index[indiv]{Guillerm de Champsdivers}, knight, Chamberlain of John\index[indiv]{John}, Duke of Burgundy, for the prorogation of the truce with the Duke of Burgundy.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Commission to Thomas Walshe\index[indiv]{Thomas Walshe} to procure workmen from London and its suburbs to make harps for the King's use.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Dower to Joan de Brucourt\index[indiv]{Joan de Brucourt}, widow of Gerard de Tournebu\index[indiv]{Gerard de Tournebu}.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Commission to Guillerm de Champdivers\index[indiv]{Guillerm de Champdivers} to prorogue the truce between the King of England and the Duke of Burgundy.
+               
+            \subsection{1418-03-28, Bayeux}
+            
+                  Grant to Ralph Neville\index[indiv]{Ralph Neville} in tail male of the possessions of William Desmoulins\index[indiv]{William Desmoulins} and Robert de Freville\index[indiv]{Robert de Freville}, knights, rebels, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-25, Bayeux}
+            
+                  Same for life to Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, of the house in Caen called l'Ostell Bavent [l’hôtel Bavent].
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to Henry Flynthalgh\index[indiv]{Henry Flynthalgh} in tail male of the possessions of John Caumont\index[indiv]{John Caumont}, a rebel, by homage and the rendering yearly a lance to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same for life to William Harrington\index[indiv]{William Harrington}, knight, of the house in Caen of Drugo de Beaussy\index[indiv]{Drugo de Beaussy}, a rebel.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Restitution of its temporalities to the Convent of S. Mary of Villers-Lequinet, near Falaise.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Grant to Richard Geffrey\index[indiv]{Richard Geffrey}, minstrel, in tail male of the land of Vaux-sur-Mer and of the other possessions in Caen of Benedict le Coutelier\index[indiv]{Benedict le Coutelier}, a rebel, by homage and the rendering yearly a dagger to the King.
+               
+            \subsection{1418-03-29, Bayeux}
+            
+                  Same to John Conners\index[indiv]{John Conners} in tail male of the lordship of Repenty of John Harmoville\index[indiv]{John Harmoville} and of the possessions of Peter de Freuy\index[indiv]{Peter de Freuy}, rebels, by homage and the rendering yearly 40 pence to the King.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Safe-conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Commission to Henry\index[indiv]{Henry}, Bishop of Winchester, Nicholas\index[indiv]{Nicholas}, Bishop of Bath and Wells, John\index[indiv]{John}, Bishop of Coventry and Lichfield and Thomas Polton\index[indiv]{Thomas Polton}, Dean of York, to receive the oath of fealty from John Langret\index[indiv]{John Langret}, Bishop of Bayeux.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Safe-conduct for Lewis Thesart\index[indiv]{Lewis Thesart} coming from Neuilly castle to the King
+               
+            \subsection{1418-04-03, Bayeux}
+            
+                  Grant to John Parker\index[indiv]{John Parker} in tail male of the house at Argancy, near Bayeux, of Roberta le Boiz\index[indiv]{Roberta le Boiz}, wife of Robert de la Hay\index[indiv]{Robert de la Hay}, by homage and the rendering yearly a bow and a sheaf of broad arrows to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Same to Stephen D’Estuvaulx\index[indiv]{Stephen D’Estuvaulx} in tail male of the house at Gueron Bayeux, together with the possessions of Lawrence de Carou\index[indiv]{Lawrence de Carou} and John Lerfault\index[indiv]{John Lerfault}, absentees, by homage and the rendering yearly a cross bow to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Safe conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Livery to Henry\index[indiv]{Henry}, son of John Baubignon\index[indiv]{John Baubignon}.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant to John de Foucqueville\index[indiv]{John de Foucqueville}, of the possessions held by him before the coming of the King to Normandy.
+               
+            \subsection{1418-04-18, Bayeux}
+            
+                  Safe-conduct for John de Larchamp\index[indiv]{John de Larchamp}, coming to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Appointment of Peter Taillebois\index[indiv]{Peter Taillebois} as keeper of the seal for recognizances at Bayeux.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant of the castle and lordship of Briqueville-sur-Mer to John\index[indiv]{John}, Earl of Huntingdon, in tail male, by homage and the rendering yearly a chest of quarrels to the King ; also of the messuage in the parish of S. Stephen, Caen, of William Balargent\index[indiv]{William Balargent}, late citizen of Caen.
+               
+            \subsection{1418-04-07, Bayeux}
+            
+                     Safe conduct for Cudard de Fouilliac\index[indiv]{Cudard de Fouilliac}, secretary of the Duke of Orleans, prisoner of the King, and others coming to England touching the ransom of Duke's brother John\index[indiv]{John}.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Grant to William Hasand\index[indiv]{William Hasand} in tail male of the possessions of the late John Suhard\index[indiv]{John Suhard} and his brother Roger Suhard\index[indiv]{Roger Suhard} rebel, now a rebel, by homage and the rendering yearly a poleaxe to the King.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Same to Peter Logge\index[indiv]{Peter Logge} in tail male of the possessions in Caen of William le Gars\index[indiv]{William le Gars}, by homage and the rendering yearly a sheaf of arrows to the King.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Same to Thomas Lyndford\index[indiv]{Thomas Lyndford}, one of the yeoman of the King's stables, in tail male of the house and lands of William de Vaux\index[indiv]{William de Vaux}, a rebel, within the parish of Vaux-sur-Eure, in the bailiwick of Bayeux, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Same for life to William Wymyngton\index[indiv]{William Wymyngton} of the house of John Garnere\index[indiv]{John Garnere}, a citizen of Argentan, a rebel.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Restitution of its temporalities to the church of S. Marcouf of Bayeux.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to brethren and sisters of congregation of the blind of S. Gracien, near Bayeux, to take dead wood from King's forests, excepting on Sundays and the annual fêtes.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to John Bromley\index[indiv]{John Bromley} in tail male of the house of Molay-Bacon, Bayeux, together with the possessions of Alan de Beaumont\index[indiv]{Alan de Beaumont}, a rebel, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-19, Bayeux}
+            
+                     Safe conduct for Guillaume Champdivers\index[indiv]{Guillaume Champdivers}, knight, coming to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Grant to William Rothelane\index[indiv]{William Rothelane} in tail male of the possessions of Oliver Folygny\index[indiv]{Oliver Folygny} and James\index[indiv]{James}, his brother, rebels, by homage and the rendering yearly the head of a lance to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Same to the Abbey of S. Mary de la Trappe of the custody of its temporalities.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same to Andrew Ballam\index[indiv]{Andrew Ballam} and his heirs of the messuage in parish of S. Peter, Caen, of John Bidault\index[indiv]{John Bidault}, a rebel.
+                  
+            \subsection{1418-04-22, Caen}
+            
+                     Safe conduct for Richard Gauter\index[indiv]{Richard Gauter}, of the parish of S. Peter, Caen, cordwainer, coming to the King.
+                  
+            \subsection{1418-04-26, Caen}
+            
+                     Safe conduct for Robert Moutiers\index[indiv]{Robert Moutiers} of Bayeux.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Licence to Richard Bristowe\index[indiv]{Richard Bristowe}, to ship 800 quarters of malt and other goods bought in England to Harfleur and other ports in Normandy.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Restitution of its temporalities to the Abbey of S. Mary de Belle Etoile, in the comté of Vire.
+                  
+            \subsection{1418-04-27, Bayeux}
+            
+                     Safe conduct for Benedict\index[indiv]{Benedict}, Nicholas\index[indiv]{Nicholas} and Ralph le Harpeur\index[indiv]{Ralph le Harpeur}, Richard\index[indiv]{Richard} and Peter Muriel\index[indiv]{Peter Muriel}, John Adeline\index[indiv]{John Adeline}, John Gosselin\index[indiv]{John Gosselin}, senior, Peter Gosselin\index[indiv]{Peter Gosselin}, junior all of Bayeux ; and for John le Harpeur\index[indiv]{John le Harpeur}, John Gourdec\index[indiv]{John Gourdec}, Richard Lucas\index[indiv]{Richard Lucas}, John le Maigre\index[indiv]{John le Maigre}, and Peter le Maigre\index[indiv]{Peter le Maigre}, coming to the King.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Joan de Boys Hubault\index[indiv]{Joan de Boys Hubault}, widow of Robert de Thibouville\index[indiv]{Robert de Thibouville}, knight, of the lands she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Safe conduct for John de Maugneville\index[indiv]{John de Maugneville}, knight, coming from Brittany to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Same for Joan de Ver\index[indiv]{Joan de Ver} widow of James de Foligny\index[indiv]{James de Foligny}, knight, coming to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Evroult.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of temporalities to the convent of Tailleville, Caen, to Richard de la Fosse\index[indiv]{Richard de la Fosse}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of Stephen Barate\index[indiv]{Stephen Barate}, citizen of Bayeux, as weigher of all saleable goods coming to Bayeux.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Letters of attorney to John Popham\index[indiv]{John Popham}, knight, in the service of the king in Normandy, in the names of John Frank\index[indiv]{John Frank}, clerk, and William Westbury\index[indiv]{William Westbury}.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Philip le Clerc\index[indiv]{Philip le Clerc}, chaplain of the parish of Lion-sur-Mer, of the lands he held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Letters of attorney to John Gray\index[indiv]{John Gray}, knight, in the service of the King in Normandy, in the names of Thomas Caldewell\index[indiv]{Thomas Caldewell}, of Lincoln, clerk, and Alan Humburston\index[indiv]{Alan Humburston}, of the same county.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of the convent of Briouse to Robert Heron\index[indiv]{Robert Heron}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of John Meigniant\index[indiv]{John Meigniant} as verderor of Mont de Lencre, in the vicomté of Vire.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Grant to John Botelier\index[indiv]{John Botelier} in tail male of the manor of Riqueville, in the comté of Caen of Robert\index[indiv]{Robert} and William Riqueville\index[indiv]{William Riqueville}, rebels ; also of the possessions of Peter\index[indiv]{Peter} and Richard Goudenin\index[indiv]{Richard Goudenin}, rebels ; also of a certain messuage in Caen of John Gesors\index[indiv]{John Gesors}, a rebel, by homage and the rendering yearly a sword of Gascony to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of Bayeux to the Dean.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Grant to the Abbey of S. Mary of Montmorell, Avranches, of the custody of its temporalities.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Same to Joan de Rupalay\index[indiv]{Joan de Rupalay}, widow of Robert de Bloville\index[indiv]{Robert de Bloville}, of the possessions she held within the comté of Bayeux before the last coming of the King to Normandy.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Same to John Harpeden\index[indiv]{John Harpeden}, knight, in tail male of the Castle and lordship of Chantelou, and the manors of Appelly and Creaunces within the comtés of Coutances and Avranches, of Joan de Champayn\index[indiv]{Joan de Champayn}, widow of Nicholas Paignel\index[indiv]{Nicholas Paignel}, absentee, by homage and the rendering yearly a sword to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same to Joan Liebart\index[indiv]{Joan Liebart}, widow of William de Vauchelles\index[indiv]{William de Vauchelles}, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant for life to Joan de la Rochelle\index[indiv]{Joan de la Rochelle}, sworn, widow of Anthony de Wargmez\index[indiv]{Anthony de Wargmez}, of Caen.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to the brethren of the Priory of Saint Nicholas de la Maladerie, near Bayeux, to be represented by attorney in all their suits before the secular judges without the permission of their prior.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for the brethren of the Hôtel-Dieu, near Bayeux.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Lô.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of the temporalities of the house of S. John of Jerusalem at Breteville-Labarel, Seez, to Nicholas de Mouster\index[indiv]{Nicholas de Mouster}, Master.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Robert la Hure\index[indiv]{Robert la Hure} coming to Paris and thence to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same for Richard de Beuseville\index[indiv]{Richard de Beuseville}, canon of Bayeux, coming to the King.
+                  
+            \subsection{1418-04-15, Bayeux}
+            
+                     Restitution of the temporalities to Maturine Pilliehonne\index[indiv]{Maturine Pilliehonne}, Prioress of S. Mary de la Came, Bayeux.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Dower to Mary\index[indiv]{Mary}, widow of Lewis Graunt\index[indiv]{Lewis Graunt}.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Simon Basire\index[indiv]{Simon Basire} coming to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Restitution of its temporalities to the Church of S. Mary de Frigidovico Caen.
+                  
+            \subsection{1418-05-21, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of John l'Englois\index[indiv]{John l'Englois}, of the possessions she held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Safe conduct for Nicholas Philip\index[indiv]{Nicholas Philip}, of Bayeux, coming to the King.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Grant of certain tolls on wine, beer, and salt to the burgesses of Falaise for the repair of their walls and of their clock and foutains.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Licence to the citizen of Falaise to establish a hospital for the poor at Falaise and to hold the advowson of the parish church of S. George of Mortain.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence to Edward\index[indiv]{Edward}, Earl of Mortagne to hold his courts within the town of Vire in order to be out of the reach of annoyance from the enemy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Safe-conduct for Laurence de Carou\index[indiv]{Laurence de Carou} and John Ersfault\index[indiv]{John Ersfault} coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for Roger le Pelerin\index[indiv]{Roger le Pelerin} and John\index[indiv]{John} his son; John Boudoum\index[indiv]{John Boudoum} and Peter\index[indiv]{Peter} his son ; Ralph\index[indiv]{Ralph}, brother of the said Peter, and Giles\index[indiv]{Giles}, brother of the said Ralph; Philip Summoneaulx\index[indiv]{Philip Summoneaulx} and John\index[indiv]{John} his son; Ralph de Basco\index[indiv]{Ralph de Basco} and Thomas\index[indiv]{Thomas} his son; and Michael Sufflet\index[indiv]{Michael Sufflet}, peasants, coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Protection to William de la Haie\index[indiv]{William de la Haie}, merchant, and his servants, conveying wine and other goods to various parts of Normandy for the use of the King's subjects.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of Jordan Bescog\index[indiv]{Jordan Bescog}, of Bayeux, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-21, Bayeux}
+            
+                     Same to John de Buret\index[indiv]{John de Buret} and his heirs of the possessions of his father, now a rebel, by homage and the rendering yearly a dagger to the King. The said John de Buret\index[indiv]{John de Buret} to maintain his mother, brothers, and sisters, during their lifetime.
+                  
+            \subsection{1418-04-25, Bayeux}
+            
+                     Safe-conduct for Adam\index[indiv]{Adam}, Bishop of Mans, coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Protection to John Dubey\index[indiv]{John Dubey}, chaplain, coming in quest of certain goods belonging to Gervais Larchamp\index[indiv]{Gervais Larchamp}, Sub-dean of S. Mary of Bayeux, which are to be brought to Bayeux.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Safe conduct for John Larchamp\index[indiv]{John Larchamp} coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Power for Reginald West\index[indiv]{Reginald West}, captain of S. Lo, to receive such of the inhabitants of S. Lô and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Same for John Smythes\index[indiv]{John Smythes}, captain of the town of Vire, to receive such of the inhabitants of Vire and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-29, Bayeux}
+            
+                     Safe conduct for Matthew de Aula\index[indiv]{Matthew de Aula} and John de Jusseyo\index[indiv]{John de Jusseyo} coming from the castle of Nully-Levêque, with their retinue, to the King.
+                  
+            \newpage
+        
+        \section{Membrane 39}
+        
+            \subsection{1418-03-21, Bayeux}
+            
+                  Grant to William Hotoft\index[indiv]{William Hotoft} in tail male of the lordship of Asseville of Ralph Jone\index[indiv]{Ralph Jone}, deceased, also of the manor of Herville Caen of John Cottard\index[indiv]{John Cottard}, deceased, by homage and the rendering yearly a sword to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to William Porter\index[indiv]{William Porter}, esquire, in tail male of the possessions of William d'Assy\index[indiv]{William d'Assy}, a rebel, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Power for Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, to treat with Guillerm de Champsdivers\index[indiv]{Guillerm de Champsdivers}, knight, Chamberlain of John\index[indiv]{John}, Duke of Burgundy, for the prorogation of the truce with the Duke of Burgundy.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Commission to Thomas Walshe\index[indiv]{Thomas Walshe} to procure workmen from London and its suburbs to make harps for the King's use.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Dower to Joan de Brucourt\index[indiv]{Joan de Brucourt}, widow of Gerard de Tournebu\index[indiv]{Gerard de Tournebu}.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Commission to Guillerm de Champdivers\index[indiv]{Guillerm de Champdivers} to prorogue the truce between the King of England and the Duke of Burgundy.
+               
+            \subsection{1418-03-28, Bayeux}
+            
+                  Grant to Ralph Neville\index[indiv]{Ralph Neville} in tail male of the possessions of William Desmoulins\index[indiv]{William Desmoulins} and Robert de Freville\index[indiv]{Robert de Freville}, knights, rebels, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-25, Bayeux}
+            
+                  Same for life to Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, of the house in Caen called l'Ostell Bavent [l’hôtel Bavent].
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to Henry Flynthalgh\index[indiv]{Henry Flynthalgh} in tail male of the possessions of John Caumont\index[indiv]{John Caumont}, a rebel, by homage and the rendering yearly a lance to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same for life to William Harrington\index[indiv]{William Harrington}, knight, of the house in Caen of Drugo de Beaussy\index[indiv]{Drugo de Beaussy}, a rebel.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Restitution of its temporalities to the Convent of S. Mary of Villers-Lequinet, near Falaise.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Grant to Richard Geffrey\index[indiv]{Richard Geffrey}, minstrel, in tail male of the land of Vaux-sur-Mer and of the other possessions in Caen of Benedict le Coutelier\index[indiv]{Benedict le Coutelier}, a rebel, by homage and the rendering yearly a dagger to the King.
+               
+            \subsection{1418-03-29, Bayeux}
+            
+                  Same to John Conners\index[indiv]{John Conners} in tail male of the lordship of Repenty of John Harmoville\index[indiv]{John Harmoville} and of the possessions of Peter de Freuy\index[indiv]{Peter de Freuy}, rebels, by homage and the rendering yearly 40 pence to the King.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Safe-conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Commission to Henry\index[indiv]{Henry}, Bishop of Winchester, Nicholas\index[indiv]{Nicholas}, Bishop of Bath and Wells, John\index[indiv]{John}, Bishop of Coventry and Lichfield and Thomas Polton\index[indiv]{Thomas Polton}, Dean of York, to receive the oath of fealty from John Langret\index[indiv]{John Langret}, Bishop of Bayeux.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Safe-conduct for Lewis Thesart\index[indiv]{Lewis Thesart} coming from Neuilly castle to the King
+               
+            \subsection{1418-04-03, Bayeux}
+            
+                  Grant to John Parker\index[indiv]{John Parker} in tail male of the house at Argancy, near Bayeux, of Roberta le Boiz\index[indiv]{Roberta le Boiz}, wife of Robert de la Hay\index[indiv]{Robert de la Hay}, by homage and the rendering yearly a bow and a sheaf of broad arrows to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Same to Stephen D’Estuvaulx\index[indiv]{Stephen D’Estuvaulx} in tail male of the house at Gueron Bayeux, together with the possessions of Lawrence de Carou\index[indiv]{Lawrence de Carou} and John Lerfault\index[indiv]{John Lerfault}, absentees, by homage and the rendering yearly a cross bow to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Safe conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Livery to Henry\index[indiv]{Henry}, son of John Baubignon\index[indiv]{John Baubignon}.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant to John de Foucqueville\index[indiv]{John de Foucqueville}, of the possessions held by him before the coming of the King to Normandy.
+               
+            \subsection{1418-04-18, Bayeux}
+            
+                  Safe-conduct for John de Larchamp\index[indiv]{John de Larchamp}, coming to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Appointment of Peter Taillebois\index[indiv]{Peter Taillebois} as keeper of the seal for recognizances at Bayeux.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant of the castle and lordship of Briqueville-sur-Mer to John\index[indiv]{John}, Earl of Huntingdon, in tail male, by homage and the rendering yearly a chest of quarrels to the King ; also of the messuage in the parish of S. Stephen, Caen, of William Balargent\index[indiv]{William Balargent}, late citizen of Caen.
+               
+            \subsection{1418-04-07, Bayeux}
+            
+                     Safe conduct for Cudard de Fouilliac\index[indiv]{Cudard de Fouilliac}, secretary of the Duke of Orleans, prisoner of the King, and others coming to England touching the ransom of Duke's brother John\index[indiv]{John}.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Grant to William Hasand\index[indiv]{William Hasand} in tail male of the possessions of the late John Suhard\index[indiv]{John Suhard} and his brother Roger Suhard\index[indiv]{Roger Suhard} rebel, now a rebel, by homage and the rendering yearly a poleaxe to the King.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Same to Peter Logge\index[indiv]{Peter Logge} in tail male of the possessions in Caen of William le Gars\index[indiv]{William le Gars}, by homage and the rendering yearly a sheaf of arrows to the King.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Same to Thomas Lyndford\index[indiv]{Thomas Lyndford}, one of the yeoman of the King's stables, in tail male of the house and lands of William de Vaux\index[indiv]{William de Vaux}, a rebel, within the parish of Vaux-sur-Eure, in the bailiwick of Bayeux, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Same for life to William Wymyngton\index[indiv]{William Wymyngton} of the house of John Garnere\index[indiv]{John Garnere}, a citizen of Argentan, a rebel.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Restitution of its temporalities to the church of S. Marcouf of Bayeux.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to brethren and sisters of congregation of the blind of S. Gracien, near Bayeux, to take dead wood from King's forests, excepting on Sundays and the annual fêtes.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to John Bromley\index[indiv]{John Bromley} in tail male of the house of Molay-Bacon, Bayeux, together with the possessions of Alan de Beaumont\index[indiv]{Alan de Beaumont}, a rebel, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-19, Bayeux}
+            
+                     Safe conduct for Guillaume Champdivers\index[indiv]{Guillaume Champdivers}, knight, coming to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Grant to William Rothelane\index[indiv]{William Rothelane} in tail male of the possessions of Oliver Folygny\index[indiv]{Oliver Folygny} and James\index[indiv]{James}, his brother, rebels, by homage and the rendering yearly the head of a lance to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Same to the Abbey of S. Mary de la Trappe of the custody of its temporalities.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same to Andrew Ballam\index[indiv]{Andrew Ballam} and his heirs of the messuage in parish of S. Peter, Caen, of John Bidault\index[indiv]{John Bidault}, a rebel.
+                  
+            \subsection{1418-04-22, Caen}
+            
+                     Safe conduct for Richard Gauter\index[indiv]{Richard Gauter}, of the parish of S. Peter, Caen, cordwainer, coming to the King.
+                  
+            \subsection{1418-04-26, Caen}
+            
+                     Safe conduct for Robert Moutiers\index[indiv]{Robert Moutiers} of Bayeux.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Licence to Richard Bristowe\index[indiv]{Richard Bristowe}, to ship 800 quarters of malt and other goods bought in England to Harfleur and other ports in Normandy.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Restitution of its temporalities to the Abbey of S. Mary de Belle Etoile, in the comté of Vire.
+                  
+            \subsection{1418-04-27, Bayeux}
+            
+                     Safe conduct for Benedict\index[indiv]{Benedict}, Nicholas\index[indiv]{Nicholas} and Ralph le Harpeur\index[indiv]{Ralph le Harpeur}, Richard\index[indiv]{Richard} and Peter Muriel\index[indiv]{Peter Muriel}, John Adeline\index[indiv]{John Adeline}, John Gosselin\index[indiv]{John Gosselin}, senior, Peter Gosselin\index[indiv]{Peter Gosselin}, junior all of Bayeux ; and for John le Harpeur\index[indiv]{John le Harpeur}, John Gourdec\index[indiv]{John Gourdec}, Richard Lucas\index[indiv]{Richard Lucas}, John le Maigre\index[indiv]{John le Maigre}, and Peter le Maigre\index[indiv]{Peter le Maigre}, coming to the King.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Joan de Boys Hubault\index[indiv]{Joan de Boys Hubault}, widow of Robert de Thibouville\index[indiv]{Robert de Thibouville}, knight, of the lands she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Safe conduct for John de Maugneville\index[indiv]{John de Maugneville}, knight, coming from Brittany to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Same for Joan de Ver\index[indiv]{Joan de Ver} widow of James de Foligny\index[indiv]{James de Foligny}, knight, coming to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Evroult.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of temporalities to the convent of Tailleville, Caen, to Richard de la Fosse\index[indiv]{Richard de la Fosse}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of Stephen Barate\index[indiv]{Stephen Barate}, citizen of Bayeux, as weigher of all saleable goods coming to Bayeux.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Letters of attorney to John Popham\index[indiv]{John Popham}, knight, in the service of the king in Normandy, in the names of John Frank\index[indiv]{John Frank}, clerk, and William Westbury\index[indiv]{William Westbury}.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Philip le Clerc\index[indiv]{Philip le Clerc}, chaplain of the parish of Lion-sur-Mer, of the lands he held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Letters of attorney to John Gray\index[indiv]{John Gray}, knight, in the service of the King in Normandy, in the names of Thomas Caldewell\index[indiv]{Thomas Caldewell}, of Lincoln, clerk, and Alan Humburston\index[indiv]{Alan Humburston}, of the same county.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of the convent of Briouse to Robert Heron\index[indiv]{Robert Heron}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of John Meigniant\index[indiv]{John Meigniant} as verderor of Mont de Lencre, in the vicomté of Vire.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Grant to John Botelier\index[indiv]{John Botelier} in tail male of the manor of Riqueville, in the comté of Caen of Robert\index[indiv]{Robert} and William Riqueville\index[indiv]{William Riqueville}, rebels ; also of the possessions of Peter\index[indiv]{Peter} and Richard Goudenin\index[indiv]{Richard Goudenin}, rebels ; also of a certain messuage in Caen of John Gesors\index[indiv]{John Gesors}, a rebel, by homage and the rendering yearly a sword of Gascony to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of Bayeux to the Dean.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Grant to the Abbey of S. Mary of Montmorell, Avranches, of the custody of its temporalities.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Same to Joan de Rupalay\index[indiv]{Joan de Rupalay}, widow of Robert de Bloville\index[indiv]{Robert de Bloville}, of the possessions she held within the comté of Bayeux before the last coming of the King to Normandy.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Same to John Harpeden\index[indiv]{John Harpeden}, knight, in tail male of the Castle and lordship of Chantelou, and the manors of Appelly and Creaunces within the comtés of Coutances and Avranches, of Joan de Champayn\index[indiv]{Joan de Champayn}, widow of Nicholas Paignel\index[indiv]{Nicholas Paignel}, absentee, by homage and the rendering yearly a sword to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same to Joan Liebart\index[indiv]{Joan Liebart}, widow of William de Vauchelles\index[indiv]{William de Vauchelles}, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant for life to Joan de la Rochelle\index[indiv]{Joan de la Rochelle}, sworn, widow of Anthony de Wargmez\index[indiv]{Anthony de Wargmez}, of Caen.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to the brethren of the Priory of Saint Nicholas de la Maladerie, near Bayeux, to be represented by attorney in all their suits before the secular judges without the permission of their prior.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for the brethren of the Hôtel-Dieu, near Bayeux.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Lô.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of the temporalities of the house of S. John of Jerusalem at Breteville-Labarel, Seez, to Nicholas de Mouster\index[indiv]{Nicholas de Mouster}, Master.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Robert la Hure\index[indiv]{Robert la Hure} coming to Paris and thence to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same for Richard de Beuseville\index[indiv]{Richard de Beuseville}, canon of Bayeux, coming to the King.
+                  
+            \subsection{1418-04-15, Bayeux}
+            
+                     Restitution of the temporalities to Maturine Pilliehonne\index[indiv]{Maturine Pilliehonne}, Prioress of S. Mary de la Came, Bayeux.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Dower to Mary\index[indiv]{Mary}, widow of Lewis Graunt\index[indiv]{Lewis Graunt}.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Simon Basire\index[indiv]{Simon Basire} coming to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Restitution of its temporalities to the Church of S. Mary de Frigidovico Caen.
+                  
+            \subsection{1418-05-21, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of John l'Englois\index[indiv]{John l'Englois}, of the possessions she held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Safe conduct for Nicholas Philip\index[indiv]{Nicholas Philip}, of Bayeux, coming to the King.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Grant of certain tolls on wine, beer, and salt to the burgesses of Falaise for the repair of their walls and of their clock and foutains.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Licence to the citizen of Falaise to establish a hospital for the poor at Falaise and to hold the advowson of the parish church of S. George of Mortain.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence to Edward\index[indiv]{Edward}, Earl of Mortagne to hold his courts within the town of Vire in order to be out of the reach of annoyance from the enemy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Safe-conduct for Laurence de Carou\index[indiv]{Laurence de Carou} and John Ersfault\index[indiv]{John Ersfault} coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for Roger le Pelerin\index[indiv]{Roger le Pelerin} and John\index[indiv]{John} his son; John Boudoum\index[indiv]{John Boudoum} and Peter\index[indiv]{Peter} his son ; Ralph\index[indiv]{Ralph}, brother of the said Peter, and Giles\index[indiv]{Giles}, brother of the said Ralph; Philip Summoneaulx\index[indiv]{Philip Summoneaulx} and John\index[indiv]{John} his son; Ralph de Basco\index[indiv]{Ralph de Basco} and Thomas\index[indiv]{Thomas} his son; and Michael Sufflet\index[indiv]{Michael Sufflet}, peasants, coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Protection to William de la Haie\index[indiv]{William de la Haie}, merchant, and his servants, conveying wine and other goods to various parts of Normandy for the use of the King's subjects.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of Jordan Bescog\index[indiv]{Jordan Bescog}, of Bayeux, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-21, Bayeux}
+            
+                     Same to John de Buret\index[indiv]{John de Buret} and his heirs of the possessions of his father, now a rebel, by homage and the rendering yearly a dagger to the King. The said John de Buret\index[indiv]{John de Buret} to maintain his mother, brothers, and sisters, during their lifetime.
+                  
+            \subsection{1418-04-25, Bayeux}
+            
+                     Safe-conduct for Adam\index[indiv]{Adam}, Bishop of Mans, coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Protection to John Dubey\index[indiv]{John Dubey}, chaplain, coming in quest of certain goods belonging to Gervais Larchamp\index[indiv]{Gervais Larchamp}, Sub-dean of S. Mary of Bayeux, which are to be brought to Bayeux.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Safe conduct for John Larchamp\index[indiv]{John Larchamp} coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Power for Reginald West\index[indiv]{Reginald West}, captain of S. Lo, to receive such of the inhabitants of S. Lô and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Same for John Smythes\index[indiv]{John Smythes}, captain of the town of Vire, to receive such of the inhabitants of Vire and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-29, Bayeux}
+            
+                     Safe conduct for Matthew de Aula\index[indiv]{Matthew de Aula} and John de Jusseyo\index[indiv]{John de Jusseyo} coming from the castle of Nully-Levêque, with their retinue, to the King.
+                  
+            \newpage
+        
+        \section{Membrane 38}
+        
+            \subsection{1418-03-21, Bayeux}
+            
+                  Grant to William Hotoft\index[indiv]{William Hotoft} in tail male of the lordship of Asseville of Ralph Jone\index[indiv]{Ralph Jone}, deceased, also of the manor of Herville Caen of John Cottard\index[indiv]{John Cottard}, deceased, by homage and the rendering yearly a sword to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to William Porter\index[indiv]{William Porter}, esquire, in tail male of the possessions of William d'Assy\index[indiv]{William d'Assy}, a rebel, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Power for Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, to treat with Guillerm de Champsdivers\index[indiv]{Guillerm de Champsdivers}, knight, Chamberlain of John\index[indiv]{John}, Duke of Burgundy, for the prorogation of the truce with the Duke of Burgundy.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Commission to Thomas Walshe\index[indiv]{Thomas Walshe} to procure workmen from London and its suburbs to make harps for the King's use.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Dower to Joan de Brucourt\index[indiv]{Joan de Brucourt}, widow of Gerard de Tournebu\index[indiv]{Gerard de Tournebu}.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Commission to Guillerm de Champdivers\index[indiv]{Guillerm de Champdivers} to prorogue the truce between the King of England and the Duke of Burgundy.
+               
+            \subsection{1418-03-28, Bayeux}
+            
+                  Grant to Ralph Neville\index[indiv]{Ralph Neville} in tail male of the possessions of William Desmoulins\index[indiv]{William Desmoulins} and Robert de Freville\index[indiv]{Robert de Freville}, knights, rebels, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-25, Bayeux}
+            
+                  Same for life to Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, of the house in Caen called l'Ostell Bavent [l’hôtel Bavent].
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to Henry Flynthalgh\index[indiv]{Henry Flynthalgh} in tail male of the possessions of John Caumont\index[indiv]{John Caumont}, a rebel, by homage and the rendering yearly a lance to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same for life to William Harrington\index[indiv]{William Harrington}, knight, of the house in Caen of Drugo de Beaussy\index[indiv]{Drugo de Beaussy}, a rebel.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Restitution of its temporalities to the Convent of S. Mary of Villers-Lequinet, near Falaise.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Grant to Richard Geffrey\index[indiv]{Richard Geffrey}, minstrel, in tail male of the land of Vaux-sur-Mer and of the other possessions in Caen of Benedict le Coutelier\index[indiv]{Benedict le Coutelier}, a rebel, by homage and the rendering yearly a dagger to the King.
+               
+            \subsection{1418-03-29, Bayeux}
+            
+                  Same to John Conners\index[indiv]{John Conners} in tail male of the lordship of Repenty of John Harmoville\index[indiv]{John Harmoville} and of the possessions of Peter de Freuy\index[indiv]{Peter de Freuy}, rebels, by homage and the rendering yearly 40 pence to the King.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Safe-conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Commission to Henry\index[indiv]{Henry}, Bishop of Winchester, Nicholas\index[indiv]{Nicholas}, Bishop of Bath and Wells, John\index[indiv]{John}, Bishop of Coventry and Lichfield and Thomas Polton\index[indiv]{Thomas Polton}, Dean of York, to receive the oath of fealty from John Langret\index[indiv]{John Langret}, Bishop of Bayeux.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Safe-conduct for Lewis Thesart\index[indiv]{Lewis Thesart} coming from Neuilly castle to the King
+               
+            \subsection{1418-04-03, Bayeux}
+            
+                  Grant to John Parker\index[indiv]{John Parker} in tail male of the house at Argancy, near Bayeux, of Roberta le Boiz\index[indiv]{Roberta le Boiz}, wife of Robert de la Hay\index[indiv]{Robert de la Hay}, by homage and the rendering yearly a bow and a sheaf of broad arrows to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Same to Stephen D’Estuvaulx\index[indiv]{Stephen D’Estuvaulx} in tail male of the house at Gueron Bayeux, together with the possessions of Lawrence de Carou\index[indiv]{Lawrence de Carou} and John Lerfault\index[indiv]{John Lerfault}, absentees, by homage and the rendering yearly a cross bow to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Safe conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Livery to Henry\index[indiv]{Henry}, son of John Baubignon\index[indiv]{John Baubignon}.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant to John de Foucqueville\index[indiv]{John de Foucqueville}, of the possessions held by him before the coming of the King to Normandy.
+               
+            \subsection{1418-04-18, Bayeux}
+            
+                  Safe-conduct for John de Larchamp\index[indiv]{John de Larchamp}, coming to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Appointment of Peter Taillebois\index[indiv]{Peter Taillebois} as keeper of the seal for recognizances at Bayeux.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant of the castle and lordship of Briqueville-sur-Mer to John\index[indiv]{John}, Earl of Huntingdon, in tail male, by homage and the rendering yearly a chest of quarrels to the King ; also of the messuage in the parish of S. Stephen, Caen, of William Balargent\index[indiv]{William Balargent}, late citizen of Caen.
+               
+            \subsection{1418-04-07, Bayeux}
+            
+                     Safe conduct for Cudard de Fouilliac\index[indiv]{Cudard de Fouilliac}, secretary of the Duke of Orleans, prisoner of the King, and others coming to England touching the ransom of Duke's brother John\index[indiv]{John}.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Grant to William Hasand\index[indiv]{William Hasand} in tail male of the possessions of the late John Suhard\index[indiv]{John Suhard} and his brother Roger Suhard\index[indiv]{Roger Suhard} rebel, now a rebel, by homage and the rendering yearly a poleaxe to the King.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Same to Peter Logge\index[indiv]{Peter Logge} in tail male of the possessions in Caen of William le Gars\index[indiv]{William le Gars}, by homage and the rendering yearly a sheaf of arrows to the King.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Same to Thomas Lyndford\index[indiv]{Thomas Lyndford}, one of the yeoman of the King's stables, in tail male of the house and lands of William de Vaux\index[indiv]{William de Vaux}, a rebel, within the parish of Vaux-sur-Eure, in the bailiwick of Bayeux, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Same for life to William Wymyngton\index[indiv]{William Wymyngton} of the house of John Garnere\index[indiv]{John Garnere}, a citizen of Argentan, a rebel.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Restitution of its temporalities to the church of S. Marcouf of Bayeux.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to brethren and sisters of congregation of the blind of S. Gracien, near Bayeux, to take dead wood from King's forests, excepting on Sundays and the annual fêtes.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to John Bromley\index[indiv]{John Bromley} in tail male of the house of Molay-Bacon, Bayeux, together with the possessions of Alan de Beaumont\index[indiv]{Alan de Beaumont}, a rebel, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-19, Bayeux}
+            
+                     Safe conduct for Guillaume Champdivers\index[indiv]{Guillaume Champdivers}, knight, coming to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Grant to William Rothelane\index[indiv]{William Rothelane} in tail male of the possessions of Oliver Folygny\index[indiv]{Oliver Folygny} and James\index[indiv]{James}, his brother, rebels, by homage and the rendering yearly the head of a lance to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Same to the Abbey of S. Mary de la Trappe of the custody of its temporalities.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same to Andrew Ballam\index[indiv]{Andrew Ballam} and his heirs of the messuage in parish of S. Peter, Caen, of John Bidault\index[indiv]{John Bidault}, a rebel.
+                  
+            \subsection{1418-04-22, Caen}
+            
+                     Safe conduct for Richard Gauter\index[indiv]{Richard Gauter}, of the parish of S. Peter, Caen, cordwainer, coming to the King.
+                  
+            \subsection{1418-04-26, Caen}
+            
+                     Safe conduct for Robert Moutiers\index[indiv]{Robert Moutiers} of Bayeux.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Licence to Richard Bristowe\index[indiv]{Richard Bristowe}, to ship 800 quarters of malt and other goods bought in England to Harfleur and other ports in Normandy.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Restitution of its temporalities to the Abbey of S. Mary de Belle Etoile, in the comté of Vire.
+                  
+            \subsection{1418-04-27, Bayeux}
+            
+                     Safe conduct for Benedict\index[indiv]{Benedict}, Nicholas\index[indiv]{Nicholas} and Ralph le Harpeur\index[indiv]{Ralph le Harpeur}, Richard\index[indiv]{Richard} and Peter Muriel\index[indiv]{Peter Muriel}, John Adeline\index[indiv]{John Adeline}, John Gosselin\index[indiv]{John Gosselin}, senior, Peter Gosselin\index[indiv]{Peter Gosselin}, junior all of Bayeux ; and for John le Harpeur\index[indiv]{John le Harpeur}, John Gourdec\index[indiv]{John Gourdec}, Richard Lucas\index[indiv]{Richard Lucas}, John le Maigre\index[indiv]{John le Maigre}, and Peter le Maigre\index[indiv]{Peter le Maigre}, coming to the King.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Joan de Boys Hubault\index[indiv]{Joan de Boys Hubault}, widow of Robert de Thibouville\index[indiv]{Robert de Thibouville}, knight, of the lands she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Safe conduct for John de Maugneville\index[indiv]{John de Maugneville}, knight, coming from Brittany to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Same for Joan de Ver\index[indiv]{Joan de Ver} widow of James de Foligny\index[indiv]{James de Foligny}, knight, coming to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Evroult.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of temporalities to the convent of Tailleville, Caen, to Richard de la Fosse\index[indiv]{Richard de la Fosse}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of Stephen Barate\index[indiv]{Stephen Barate}, citizen of Bayeux, as weigher of all saleable goods coming to Bayeux.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Letters of attorney to John Popham\index[indiv]{John Popham}, knight, in the service of the king in Normandy, in the names of John Frank\index[indiv]{John Frank}, clerk, and William Westbury\index[indiv]{William Westbury}.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Philip le Clerc\index[indiv]{Philip le Clerc}, chaplain of the parish of Lion-sur-Mer, of the lands he held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Letters of attorney to John Gray\index[indiv]{John Gray}, knight, in the service of the King in Normandy, in the names of Thomas Caldewell\index[indiv]{Thomas Caldewell}, of Lincoln, clerk, and Alan Humburston\index[indiv]{Alan Humburston}, of the same county.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of the convent of Briouse to Robert Heron\index[indiv]{Robert Heron}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of John Meigniant\index[indiv]{John Meigniant} as verderor of Mont de Lencre, in the vicomté of Vire.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Grant to John Botelier\index[indiv]{John Botelier} in tail male of the manor of Riqueville, in the comté of Caen of Robert\index[indiv]{Robert} and William Riqueville\index[indiv]{William Riqueville}, rebels ; also of the possessions of Peter\index[indiv]{Peter} and Richard Goudenin\index[indiv]{Richard Goudenin}, rebels ; also of a certain messuage in Caen of John Gesors\index[indiv]{John Gesors}, a rebel, by homage and the rendering yearly a sword of Gascony to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of Bayeux to the Dean.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Grant to the Abbey of S. Mary of Montmorell, Avranches, of the custody of its temporalities.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Same to Joan de Rupalay\index[indiv]{Joan de Rupalay}, widow of Robert de Bloville\index[indiv]{Robert de Bloville}, of the possessions she held within the comté of Bayeux before the last coming of the King to Normandy.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Same to John Harpeden\index[indiv]{John Harpeden}, knight, in tail male of the Castle and lordship of Chantelou, and the manors of Appelly and Creaunces within the comtés of Coutances and Avranches, of Joan de Champayn\index[indiv]{Joan de Champayn}, widow of Nicholas Paignel\index[indiv]{Nicholas Paignel}, absentee, by homage and the rendering yearly a sword to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same to Joan Liebart\index[indiv]{Joan Liebart}, widow of William de Vauchelles\index[indiv]{William de Vauchelles}, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant for life to Joan de la Rochelle\index[indiv]{Joan de la Rochelle}, sworn, widow of Anthony de Wargmez\index[indiv]{Anthony de Wargmez}, of Caen.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to the brethren of the Priory of Saint Nicholas de la Maladerie, near Bayeux, to be represented by attorney in all their suits before the secular judges without the permission of their prior.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for the brethren of the Hôtel-Dieu, near Bayeux.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Lô.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of the temporalities of the house of S. John of Jerusalem at Breteville-Labarel, Seez, to Nicholas de Mouster\index[indiv]{Nicholas de Mouster}, Master.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Robert la Hure\index[indiv]{Robert la Hure} coming to Paris and thence to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same for Richard de Beuseville\index[indiv]{Richard de Beuseville}, canon of Bayeux, coming to the King.
+                  
+            \subsection{1418-04-15, Bayeux}
+            
+                     Restitution of the temporalities to Maturine Pilliehonne\index[indiv]{Maturine Pilliehonne}, Prioress of S. Mary de la Came, Bayeux.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Dower to Mary\index[indiv]{Mary}, widow of Lewis Graunt\index[indiv]{Lewis Graunt}.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Simon Basire\index[indiv]{Simon Basire} coming to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Restitution of its temporalities to the Church of S. Mary de Frigidovico Caen.
+                  
+            \subsection{1418-05-21, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of John l'Englois\index[indiv]{John l'Englois}, of the possessions she held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Safe conduct for Nicholas Philip\index[indiv]{Nicholas Philip}, of Bayeux, coming to the King.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Grant of certain tolls on wine, beer, and salt to the burgesses of Falaise for the repair of their walls and of their clock and foutains.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Licence to the citizen of Falaise to establish a hospital for the poor at Falaise and to hold the advowson of the parish church of S. George of Mortain.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence to Edward\index[indiv]{Edward}, Earl of Mortagne to hold his courts within the town of Vire in order to be out of the reach of annoyance from the enemy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Safe-conduct for Laurence de Carou\index[indiv]{Laurence de Carou} and John Ersfault\index[indiv]{John Ersfault} coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for Roger le Pelerin\index[indiv]{Roger le Pelerin} and John\index[indiv]{John} his son; John Boudoum\index[indiv]{John Boudoum} and Peter\index[indiv]{Peter} his son ; Ralph\index[indiv]{Ralph}, brother of the said Peter, and Giles\index[indiv]{Giles}, brother of the said Ralph; Philip Summoneaulx\index[indiv]{Philip Summoneaulx} and John\index[indiv]{John} his son; Ralph de Basco\index[indiv]{Ralph de Basco} and Thomas\index[indiv]{Thomas} his son; and Michael Sufflet\index[indiv]{Michael Sufflet}, peasants, coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Protection to William de la Haie\index[indiv]{William de la Haie}, merchant, and his servants, conveying wine and other goods to various parts of Normandy for the use of the King's subjects.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of Jordan Bescog\index[indiv]{Jordan Bescog}, of Bayeux, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-21, Bayeux}
+            
+                     Same to John de Buret\index[indiv]{John de Buret} and his heirs of the possessions of his father, now a rebel, by homage and the rendering yearly a dagger to the King. The said John de Buret\index[indiv]{John de Buret} to maintain his mother, brothers, and sisters, during their lifetime.
+                  
+            \subsection{1418-04-25, Bayeux}
+            
+                     Safe-conduct for Adam\index[indiv]{Adam}, Bishop of Mans, coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Protection to John Dubey\index[indiv]{John Dubey}, chaplain, coming in quest of certain goods belonging to Gervais Larchamp\index[indiv]{Gervais Larchamp}, Sub-dean of S. Mary of Bayeux, which are to be brought to Bayeux.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Safe conduct for John Larchamp\index[indiv]{John Larchamp} coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Power for Reginald West\index[indiv]{Reginald West}, captain of S. Lo, to receive such of the inhabitants of S. Lô and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Same for John Smythes\index[indiv]{John Smythes}, captain of the town of Vire, to receive such of the inhabitants of Vire and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-29, Bayeux}
+            
+                     Safe conduct for Matthew de Aula\index[indiv]{Matthew de Aula} and John de Jusseyo\index[indiv]{John de Jusseyo} coming from the castle of Nully-Levêque, with their retinue, to the King.
+                  
+            \newpage
+        
+        \section{Membrane 37}
+        
+            \subsection{1418-03-21, Bayeux}
+            
+                  Grant to William Hotoft\index[indiv]{William Hotoft} in tail male of the lordship of Asseville of Ralph Jone\index[indiv]{Ralph Jone}, deceased, also of the manor of Herville Caen of John Cottard\index[indiv]{John Cottard}, deceased, by homage and the rendering yearly a sword to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to William Porter\index[indiv]{William Porter}, esquire, in tail male of the possessions of William d'Assy\index[indiv]{William d'Assy}, a rebel, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Power for Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, to treat with Guillerm de Champsdivers\index[indiv]{Guillerm de Champsdivers}, knight, Chamberlain of John\index[indiv]{John}, Duke of Burgundy, for the prorogation of the truce with the Duke of Burgundy.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Commission to Thomas Walshe\index[indiv]{Thomas Walshe} to procure workmen from London and its suburbs to make harps for the King's use.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Dower to Joan de Brucourt\index[indiv]{Joan de Brucourt}, widow of Gerard de Tournebu\index[indiv]{Gerard de Tournebu}.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Commission to Guillerm de Champdivers\index[indiv]{Guillerm de Champdivers} to prorogue the truce between the King of England and the Duke of Burgundy.
+               
+            \subsection{1418-03-28, Bayeux}
+            
+                  Grant to Ralph Neville\index[indiv]{Ralph Neville} in tail male of the possessions of William Desmoulins\index[indiv]{William Desmoulins} and Robert de Freville\index[indiv]{Robert de Freville}, knights, rebels, by homage and the rendering yearly a pole axe to the King.
+               
+            \subsection{1418-03-25, Bayeux}
+            
+                  Same for life to Richard Beauchamp\index[indiv]{Richard Beauchamp}, Earl of Warwick, of the house in Caen called l'Ostell Bavent [l’hôtel Bavent].
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same to Henry Flynthalgh\index[indiv]{Henry Flynthalgh} in tail male of the possessions of John Caumont\index[indiv]{John Caumont}, a rebel, by homage and the rendering yearly a lance to the King.
+               
+            \subsection{1418-03-21, Bayeux}
+            
+                  Same for life to William Harrington\index[indiv]{William Harrington}, knight, of the house in Caen of Drugo de Beaussy\index[indiv]{Drugo de Beaussy}, a rebel.
+               
+            \subsection{1418-03-24, Bayeux}
+            
+                  Restitution of its temporalities to the Convent of S. Mary of Villers-Lequinet, near Falaise.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Grant to Richard Geffrey\index[indiv]{Richard Geffrey}, minstrel, in tail male of the land of Vaux-sur-Mer and of the other possessions in Caen of Benedict le Coutelier\index[indiv]{Benedict le Coutelier}, a rebel, by homage and the rendering yearly a dagger to the King.
+               
+            \subsection{1418-03-29, Bayeux}
+            
+                  Same to John Conners\index[indiv]{John Conners} in tail male of the lordship of Repenty of John Harmoville\index[indiv]{John Harmoville} and of the possessions of Peter de Freuy\index[indiv]{Peter de Freuy}, rebels, by homage and the rendering yearly 40 pence to the King.
+               
+            \subsection{1418-03-23, Bayeux}
+            
+                  Safe-conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Commission to Henry\index[indiv]{Henry}, Bishop of Winchester, Nicholas\index[indiv]{Nicholas}, Bishop of Bath and Wells, John\index[indiv]{John}, Bishop of Coventry and Lichfield and Thomas Polton\index[indiv]{Thomas Polton}, Dean of York, to receive the oath of fealty from John Langret\index[indiv]{John Langret}, Bishop of Bayeux.
+               
+            \subsection{1418-04-01, Bayeux}
+            
+                  Safe-conduct for Lewis Thesart\index[indiv]{Lewis Thesart} coming from Neuilly castle to the King
+               
+            \subsection{1418-04-03, Bayeux}
+            
+                  Grant to John Parker\index[indiv]{John Parker} in tail male of the house at Argancy, near Bayeux, of Roberta le Boiz\index[indiv]{Roberta le Boiz}, wife of Robert de la Hay\index[indiv]{Robert de la Hay}, by homage and the rendering yearly a bow and a sheaf of broad arrows to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Same to Stephen D’Estuvaulx\index[indiv]{Stephen D’Estuvaulx} in tail male of the house at Gueron Bayeux, together with the possessions of Lawrence de Carou\index[indiv]{Lawrence de Carou} and John Lerfault\index[indiv]{John Lerfault}, absentees, by homage and the rendering yearly a cross bow to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Safe conduct for John Pyket\index[indiv]{John Pyket} coming to the King.
+               
+            \subsection{1418-04-02, Bayeux}
+            
+                  Livery to Henry\index[indiv]{Henry}, son of John Baubignon\index[indiv]{John Baubignon}.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant to John de Foucqueville\index[indiv]{John de Foucqueville}, of the possessions held by him before the coming of the King to Normandy.
+               
+            \subsection{1418-04-18, Bayeux}
+            
+                  Safe-conduct for John de Larchamp\index[indiv]{John de Larchamp}, coming to the King.
+               
+            \subsection{1418-04-04, Bayeux}
+            
+                  Appointment of Peter Taillebois\index[indiv]{Peter Taillebois} as keeper of the seal for recognizances at Bayeux.
+               
+            \subsection{1418-04-05, Bayeux}
+            
+                  Grant of the castle and lordship of Briqueville-sur-Mer to John\index[indiv]{John}, Earl of Huntingdon, in tail male, by homage and the rendering yearly a chest of quarrels to the King ; also of the messuage in the parish of S. Stephen, Caen, of William Balargent\index[indiv]{William Balargent}, late citizen of Caen.
+               
+            \subsection{1418-04-07, Bayeux}
+            
+                     Safe conduct for Cudard de Fouilliac\index[indiv]{Cudard de Fouilliac}, secretary of the Duke of Orleans, prisoner of the King, and others coming to England touching the ransom of Duke's brother John\index[indiv]{John}.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Grant to William Hasand\index[indiv]{William Hasand} in tail male of the possessions of the late John Suhard\index[indiv]{John Suhard} and his brother Roger Suhard\index[indiv]{Roger Suhard} rebel, now a rebel, by homage and the rendering yearly a poleaxe to the King.
+                  
+            \subsection{1418-04-07, Bayeux}
+            
+                     Same to Peter Logge\index[indiv]{Peter Logge} in tail male of the possessions in Caen of William le Gars\index[indiv]{William le Gars}, by homage and the rendering yearly a sheaf of arrows to the King.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Same to Thomas Lyndford\index[indiv]{Thomas Lyndford}, one of the yeoman of the King's stables, in tail male of the house and lands of William de Vaux\index[indiv]{William de Vaux}, a rebel, within the parish of Vaux-sur-Eure, in the bailiwick of Bayeux, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Same for life to William Wymyngton\index[indiv]{William Wymyngton} of the house of John Garnere\index[indiv]{John Garnere}, a citizen of Argentan, a rebel.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Restitution of its temporalities to the church of S. Marcouf of Bayeux.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to brethren and sisters of congregation of the blind of S. Gracien, near Bayeux, to take dead wood from King's forests, excepting on Sundays and the annual fêtes.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to John Bromley\index[indiv]{John Bromley} in tail male of the house of Molay-Bacon, Bayeux, together with the possessions of Alan de Beaumont\index[indiv]{Alan de Beaumont}, a rebel, by homage and the rendering yearly a belt for a coat of mail to the King.
+                  
+            \subsection{1418-04-19, Bayeux}
+            
+                     Safe conduct for Guillaume Champdivers\index[indiv]{Guillaume Champdivers}, knight, coming to the King.
+                  
+            \subsection{1418-04-03, Bayeux}
+            
+                     Grant to William Rothelane\index[indiv]{William Rothelane} in tail male of the possessions of Oliver Folygny\index[indiv]{Oliver Folygny} and James\index[indiv]{James}, his brother, rebels, by homage and the rendering yearly the head of a lance to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Same to the Abbey of S. Mary de la Trappe of the custody of its temporalities.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same to Andrew Ballam\index[indiv]{Andrew Ballam} and his heirs of the messuage in parish of S. Peter, Caen, of John Bidault\index[indiv]{John Bidault}, a rebel.
+                  
+            \subsection{1418-04-22, Caen}
+            
+                     Safe conduct for Richard Gauter\index[indiv]{Richard Gauter}, of the parish of S. Peter, Caen, cordwainer, coming to the King.
+                  
+            \subsection{1418-04-26, Caen}
+            
+                     Safe conduct for Robert Moutiers\index[indiv]{Robert Moutiers} of Bayeux.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Licence to Richard Bristowe\index[indiv]{Richard Bristowe}, to ship 800 quarters of malt and other goods bought in England to Harfleur and other ports in Normandy.
+                  
+            \subsection{1418-04-27, Caen}
+            
+                     Restitution of its temporalities to the Abbey of S. Mary de Belle Etoile, in the comté of Vire.
+                  
+            \subsection{1418-04-27, Bayeux}
+            
+                     Safe conduct for Benedict\index[indiv]{Benedict}, Nicholas\index[indiv]{Nicholas} and Ralph le Harpeur\index[indiv]{Ralph le Harpeur}, Richard\index[indiv]{Richard} and Peter Muriel\index[indiv]{Peter Muriel}, John Adeline\index[indiv]{John Adeline}, John Gosselin\index[indiv]{John Gosselin}, senior, Peter Gosselin\index[indiv]{Peter Gosselin}, junior all of Bayeux ; and for John le Harpeur\index[indiv]{John le Harpeur}, John Gourdec\index[indiv]{John Gourdec}, Richard Lucas\index[indiv]{Richard Lucas}, John le Maigre\index[indiv]{John le Maigre}, and Peter le Maigre\index[indiv]{Peter le Maigre}, coming to the King.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Joan de Boys Hubault\index[indiv]{Joan de Boys Hubault}, widow of Robert de Thibouville\index[indiv]{Robert de Thibouville}, knight, of the lands she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Safe conduct for John de Maugneville\index[indiv]{John de Maugneville}, knight, coming from Brittany to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Same for Joan de Ver\index[indiv]{Joan de Ver} widow of James de Foligny\index[indiv]{James de Foligny}, knight, coming to the King.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Evroult.
+                  
+            \subsection{1418-04-11, Bayeux}
+            
+                     Restitution of temporalities to the convent of Tailleville, Caen, to Richard de la Fosse\index[indiv]{Richard de la Fosse}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of Stephen Barate\index[indiv]{Stephen Barate}, citizen of Bayeux, as weigher of all saleable goods coming to Bayeux.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Letters of attorney to John Popham\index[indiv]{John Popham}, knight, in the service of the king in Normandy, in the names of John Frank\index[indiv]{John Frank}, clerk, and William Westbury\index[indiv]{William Westbury}.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Grant to Philip le Clerc\index[indiv]{Philip le Clerc}, chaplain of the parish of Lion-sur-Mer, of the lands he held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Letters of attorney to John Gray\index[indiv]{John Gray}, knight, in the service of the King in Normandy, in the names of Thomas Caldewell\index[indiv]{Thomas Caldewell}, of Lincoln, clerk, and Alan Humburston\index[indiv]{Alan Humburston}, of the same county.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of the convent of Briouse to Robert Heron\index[indiv]{Robert Heron}, prior.
+                  
+            \subsection{1418-04-12, Bayeux}
+            
+                     Appointment of John Meigniant\index[indiv]{John Meigniant} as verderor of Mont de Lencre, in the vicomté of Vire.
+                  
+            \subsection{1418-04-06, Bayeux}
+            
+                     Grant to John Botelier\index[indiv]{John Botelier} in tail male of the manor of Riqueville, in the comté of Caen of Robert\index[indiv]{Robert} and William Riqueville\index[indiv]{William Riqueville}, rebels ; also of the possessions of Peter\index[indiv]{Peter} and Richard Goudenin\index[indiv]{Richard Goudenin}, rebels ; also of a certain messuage in Caen of John Gesors\index[indiv]{John Gesors}, a rebel, by homage and the rendering yearly a sword of Gascony to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Restitution of the temporalities of Bayeux to the Dean.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Grant to the Abbey of S. Mary of Montmorell, Avranches, of the custody of its temporalities.
+                  
+            \subsection{1418-04-10, Bayeux}
+            
+                     Same to Joan de Rupalay\index[indiv]{Joan de Rupalay}, widow of Robert de Bloville\index[indiv]{Robert de Bloville}, of the possessions she held within the comté of Bayeux before the last coming of the King to Normandy.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Same to John Harpeden\index[indiv]{John Harpeden}, knight, in tail male of the Castle and lordship of Chantelou, and the manors of Appelly and Creaunces within the comtés of Coutances and Avranches, of Joan de Champayn\index[indiv]{Joan de Champayn}, widow of Nicholas Paignel\index[indiv]{Nicholas Paignel}, absentee, by homage and the rendering yearly a sword to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same to Joan Liebart\index[indiv]{Joan Liebart}, widow of William de Vauchelles\index[indiv]{William de Vauchelles}, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant for life to Joan de la Rochelle\index[indiv]{Joan de la Rochelle}, sworn, widow of Anthony de Wargmez\index[indiv]{Anthony de Wargmez}, of Caen.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence for one year to the brethren of the Priory of Saint Nicholas de la Maladerie, near Bayeux, to be represented by attorney in all their suits before the secular judges without the permission of their prior.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for the brethren of the Hôtel-Dieu, near Bayeux.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of its temporalities to the Abbey of S. Lô.
+                  
+            \subsection{1418-04-26, Bayeux}
+            
+                     Restitution of the temporalities of the house of S. John of Jerusalem at Breteville-Labarel, Seez, to Nicholas de Mouster\index[indiv]{Nicholas de Mouster}, Master.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Robert la Hure\index[indiv]{Robert la Hure} coming to Paris and thence to the King.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Same for Richard de Beuseville\index[indiv]{Richard de Beuseville}, canon of Bayeux, coming to the King.
+                  
+            \subsection{1418-04-15, Bayeux}
+            
+                     Restitution of the temporalities to Maturine Pilliehonne\index[indiv]{Maturine Pilliehonne}, Prioress of S. Mary de la Came, Bayeux.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Dower to Mary\index[indiv]{Mary}, widow of Lewis Graunt\index[indiv]{Lewis Graunt}.
+                  
+            \subsection{1418-04-13, Bayeux}
+            
+                     Safe conduct for Simon Basire\index[indiv]{Simon Basire} coming to the King.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Restitution of its temporalities to the Church of S. Mary de Frigidovico Caen.
+                  
+            \subsection{1418-05-21, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of John l'Englois\index[indiv]{John l'Englois}, of the possessions she held before the last coming of the King to Normandy.
+                  
+            \subsection{1418-04-14, Bayeux}
+            
+                     Safe conduct for Nicholas Philip\index[indiv]{Nicholas Philip}, of Bayeux, coming to the King.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Grant of certain tolls on wine, beer, and salt to the burgesses of Falaise for the repair of their walls and of their clock and foutains.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Licence to the citizen of Falaise to establish a hospital for the poor at Falaise and to hold the advowson of the parish church of S. George of Mortain.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Licence to Edward\index[indiv]{Edward}, Earl of Mortagne to hold his courts within the town of Vire in order to be out of the reach of annoyance from the enemy.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Safe-conduct for Laurence de Carou\index[indiv]{Laurence de Carou} and John Ersfault\index[indiv]{John Ersfault} coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Same for Roger le Pelerin\index[indiv]{Roger le Pelerin} and John\index[indiv]{John} his son; John Boudoum\index[indiv]{John Boudoum} and Peter\index[indiv]{Peter} his son ; Ralph\index[indiv]{Ralph}, brother of the said Peter, and Giles\index[indiv]{Giles}, brother of the said Ralph; Philip Summoneaulx\index[indiv]{Philip Summoneaulx} and John\index[indiv]{John} his son; Ralph de Basco\index[indiv]{Ralph de Basco} and Thomas\index[indiv]{Thomas} his son; and Michael Sufflet\index[indiv]{Michael Sufflet}, peasants, coming to the King.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Protection to William de la Haie\index[indiv]{William de la Haie}, merchant, and his servants, conveying wine and other goods to various parts of Normandy for the use of the King's subjects.
+                  
+            \subsection{1418-04-18, Bayeux}
+            
+                     Grant to Joan\index[indiv]{Joan}, widow of Jordan Bescog\index[indiv]{Jordan Bescog}, of Bayeux, of the possessions she held before the last coming of the king to Normandy.
+                  
+            \subsection{1418-04-21, Bayeux}
+            
+                     Same to John de Buret\index[indiv]{John de Buret} and his heirs of the possessions of his father, now a rebel, by homage and the rendering yearly a dagger to the King. The said John de Buret\index[indiv]{John de Buret} to maintain his mother, brothers, and sisters, during their lifetime.
+                  
+            \subsection{1418-04-25, Bayeux}
+            
+                     Safe-conduct for Adam\index[indiv]{Adam}, Bishop of Mans, coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Protection to John Dubey\index[indiv]{John Dubey}, chaplain, coming in quest of certain goods belonging to Gervais Larchamp\index[indiv]{Gervais Larchamp}, Sub-dean of S. Mary of Bayeux, which are to be brought to Bayeux.
+                  
+            \subsection{1418-03-26, Bayeux}
+            
+                     Safe conduct for John Larchamp\index[indiv]{John Larchamp} coming to the King.
+                  
+            \subsection{1418-03-22, Bayeux}
+            
+                     Power for Reginald West\index[indiv]{Reginald West}, captain of S. Lo, to receive such of the inhabitants of S. Lô and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-24, Bayeux}
+            
+                     Same for John Smythes\index[indiv]{John Smythes}, captain of the town of Vire, to receive such of the inhabitants of Vire and its neighbourhood as wish to take the oath of fealty.
+                  
+            \subsection{1418-03-29, Bayeux}
+            
+                     Safe conduct for Matthew de Aula\index[indiv]{Matthew de Aula} and John de Jusseyo\index[indiv]{John de Jusseyo} coming from the castle of Nully-Levêque, with their retinue, to the King.
+                  
+            \newpage
+           
+    \printindex[indiv]
+    \addcontentsline{toc}{chapter}{Index des noms de personnes}
+    \end{document}
+    
